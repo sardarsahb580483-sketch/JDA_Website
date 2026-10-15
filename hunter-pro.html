@@ -1,66 +1,52 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Maya - All Future Working - JAD JI</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;display:flex;justify-content:center;min-height:100vh;font-family:system-ui}.phone{width:100%;max-width:390px;background:linear-gradient(180deg,#141a2e,#0a0e1a);min-height:100vh;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 0 2px #00E5FF77}.header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;color:#fff}.energy{background:#1e263f;padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid #2a3658}.greet{padding:0 18px 6px;color:#fff}.greet h1{font-size:22px;font-weight:800;line-height:1.2}.greet p{font-size:13px;color:#8a94b8}.avatar{position:relative;width:100%;height:340px;background:#000;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;transition:0.3s}.avatar.speaking img{transform:scale(1.05)}.live{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);padding:6px 14px;border-radius:20px;font-size:11px;color:#fff;display:flex;align-items:center;gap:6px;border:1px solid #ffffff22}.dot{width:8px;height:8px;border-radius:50%;background:#00FF88}.dot.speak{background:#00E5FF;animation:blink 0.5s infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}.tabs{display:flex;gap:8px;padding:10px 16px}.tab{flex:1;background:#1e263f;border:1px solid #2a3658;padding:9px;border-radius:14px;text-align:center;font-size:12px;color:#cbd5e1;cursor:pointer}.tab.active{background:#00E5FF22;border-color:#00E5FF;color:#00E5FF}.panel{display:none;padding:10px 16px;max-height:240px;overflow-y:auto;background:#0f1424;border-top:1px solid #1e263f}.panel.show{display:block}.item{padding:8px;background:#1e263f;border-radius:10px;margin:6px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#fff}.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 16px 10px}.card{background:#1a2138;border:1px solid #2a3658;border-radius:16px;padding:10px;color:#fff;cursor:pointer}.card small{font-size:9px;color:#8a94b8;display:block}.card b{font-size:13px}.ask{display:flex;gap:8px;padding:10px 16px;background:#0f1424;border-top:1px solid #1e263f}.ask input{flex:1;padding:12px 14px;border-radius:24px;border:1px solid #2a3658;background:#1e263f;color:#fff;outline:none}.micWrap{display:flex;justify-content:center;gap:12px;padding:10px;background:#0f1424}.micBtn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a5bd7,#00E5FF);border:none;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer}.micBtn.on{background:linear-gradient(135deg,#ff0055,#ff8a00);animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}.nav{display:flex;justify-content:space-around;padding:10px 0 16px;background:#0f1424;border-top:1px solid #1e263f;color:#8a94b8;font-size:10px}.nav div{cursor:pointer;text-align:center}.nav div.active{color:#00E5FF}.pop{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-size:70px;animation:pop 0.7s;pointer-events:none;z-index:20}@keyframes pop{0%{transform:translate(-50%,-50%) scale(0)}60%{transform:translate(-50%,-50%) scale(1.3)}100%{transform:translate(-50%,-50%) scale(1)}}video{width:100%;height:200px;background:#000;border-radius:12px;display:none}.row{display:flex;gap:8px;margin-top:8px}.row input{flex:1;padding:8px 12px;border-radius:20px;border:1px solid #2a3658;background:#1a2138;color:#fff;outline:none;font-size:12px}.row button{padding:8px 14px;border-radius:20px;border:none;background:#00E5FF;color:#000;font-weight:800;font-size:12px}
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Maya - Mic Always ON - JAD JI</title><style>body{margin:0;background:#000;display:flex;justify-content:center;font-family:system-ui}.phone{width:100%;max-width:390px;background:linear-gradient(180deg,#141a2e,#0a0e1a);min-height:100vh;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 0 2px #00E5FF77}.header{display:flex;justify-content:space-between;padding:14px 16px;color:#fff}.greet{padding:0 18px 6px;color:#fff}.greet h1{font-size:22px;font-weight:800}.avatar{position:relative;width:100%;height:380px;background:#000}.avatar img{width:100%;height:100%;object-fit:cover}.live{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);padding:6px 14px;border-radius:20px;font-size:11px;color:#fff;border:1px solid #ffffff22;display:flex;gap:6px;align-items:center}.dot{width:8px;height:8px;background:#00FF88;border-radius:50%;animation:blink 1s infinite}.dot.speak{background:#00E5FF}.tabs{display:flex;gap:8px;padding:10px 16px}.tab{flex:1;background:#1e263f;border:1px solid #2a3658;padding:9px;border-radius:14px;text-align:center;font-size:12px;color:#cbd5e1}.tab.active{background:#00E5FF22;border-color:#00E5FF;color:#00E5FF}.panel{display:none;padding:10px 16px;background:#0f1424;max-height:240px;overflow:auto}.panel.show{display:block}.item{padding:8px;background:#1e263f;border-radius:10px;margin:6px 0;color:#fff;font-size:12px;display:flex;justify-content:space-between}.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 16px 10px}.card{background:#1a2138;border:1px solid #2a3658;border-radius:16px;padding:10px;color:#fff}.ask{display:flex;gap:8px;padding:10px 16px;background:#0f1424}.ask input{flex:1;padding:12px 14px;border-radius:24px;border:1px solid #2a3658;background:#1e263f;color:#fff;outline:none}.micWrap{display:flex;justify-content:center;padding:10px;background:#0f1424}.micBtn{width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#ff0055,#ff8a00);border:none;color:#fff;font-size:28px;box-shadow:0 0 30px #ff005588;animation:pulse 1s infinite}.micBtn.off{background:#1e263f;animation:none;box-shadow:none}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}.pop{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-size:70px;animation:pop 0.7s;z-index:20}@keyframes pop{0%{transform:translate(-50%,-50%) scale(0)}60%{transform:translate(-50%,-50%) scale(1.3)}100%{transform:translate(-50%,-50%) scale(1)}}
 </style></head><body>
 <div class="phone">
-<div class="header"><span>☰</span><b>Maya</b><div style="display:flex;gap:8px"><span>🔔</span><div class="energy">⚡ <span id="en">3</span> Energy</div></div></div>
-<div class="greet"><h1 id="gr">Good evening,<br>JAD JI</h1><p id="st">Listening...</p></div>
-<div class="avatar" id="av"><img id="img" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=800&fit=crop&crop=face"><div class="live"><div class="dot" id="dot"></div><span id="live">Listening...</span></div></div>
-<div class="tabs"><div class="tab active" id="t-music" onclick="openTab('music')">🎵 Music</div><div class="tab" id="t-study" onclick="openTab('study')">📚 Study</div><div class="tab" id="t-journal" onclick="openTab('journal')">📝 Journal</div></div>
-<div class="panel show" id="p-music"><div id="mlist"></div><div class="row"><input id="mi" placeholder="گانا لکھو..."><button onclick="addM()">Add + Play</button></div><audio id="aud" controls style="width:100%;margin-top:8px"></audio></div>
-<div class="panel" id="p-study"><div id="slist"></div><div class="row"><input id="si" placeholder="ٹاسک لکھو..."><button onclick="addS()">Add</button></div></div>
-<div class="panel" id="p-journal"><div id="jlist"></div><div class="row"><input id="ji" placeholder="دل کی بات..."><button onclick="addJ()">Save</button></div></div>
-<div class="panel" id="p-scan"><video id="vid" autoplay playsinline></video><div id="scanTxt" style="font-size:12px;color:#8a94b8;margin-top:8px">Scan Ready</div></div>
-<div class="panel" id="p-mem"><div id="mem" style="font-size:12px;color:#fff"></div></div>
-<div class="cards">
-<div class="card" onclick="speak('موسم 29 ڈگری ہے جاد جی، پارٹلی کلاؤڈی، ملتان میں بہترین موسم')"><small>⛅ Weather</small><b style="font-size:20px">29°</b><small>Partly cloudy<br>💧 70%</small></div>
-<div class="card" onclick="openTab('study')"><small>📅 Today</small><b style="font-size:20px" id="tc">0</b><small>Tasks<br>Pending</small></div>
-<div class="card" onclick="changeMood()"><small>😊 Mood</small><b id="mood">Happy</b><small id="moodS">Upbeat</small></div>
-</div>
-<div class="ask"><input id="txt" placeholder="Ask Maya anything..."><button onclick="send()" style="background:none;border:none;color:#00E5FF;font-size:20px">➤</button></div>
-<div class="micWrap"><button class="micBtn" id="mic" onclick="toggle()">🎤</button><button class="micBtn" style="background:#1e263f" onclick="clearAll()">🗑️</button></div>
-<div class="nav"><div class="active" id="n-home" onclick="home()">🏠<br>Home</div><div id="n-scan" onclick="doScan()">🔍<br>Scan</div><div id="n-mem" onclick="doMem()">💾<br>Memories</div><div onclick="home()">💬<br>Chat</div></div>
+<div class="header"><b>Maya</b><div>⚡ <span id="en">∞</span> Energy</div></div>
+<div class="greet"><h1 id="gr">Good evening,<br>JAD JI</h1><p id="st">🔴 Mic Always ON - سن رہی ہوں</p></div>
+<div class="avatar" id="av"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=800&fit=crop&crop=face"><div class="live"><div class="dot" id="dot"></div><span id="live">Always Listening...</span></div></div>
+<div class="tabs"><div class="tab active">🎵 Music</div><div class="tab">📚 Study</div><div class="tab">📝 Journal</div></div>
+<div class="panel show" id="p-all"><div id="list"></div><div style="display:flex;gap:8px;margin-top:8px"><input id="inp" placeholder="ٹاسک / گانا / دل کی بات لکھو..." style="flex:1;padding:8px 12px;border-radius:20px;border:1px solid #2a3658;background:#1a2138;color:#fff;outline:none"><button onclick="add()" style="padding:8px 14px;border-radius:20px;background:#00E5FF;border:none;font-weight:800">Add</button></div></div>
+<div class="cards"><div class="card" onclick="speak('موسم 29 ڈگری ہے جاد جی')"><small>⛅ Weather</small><b style="font-size:20px">29°</b></div><div class="card"><small>📅 Tasks</small><b style="font-size:20px" id="tc">0</b></div><div class="card" onclick="changeMood()"><small>😊 Mood</small><b id="mood">Happy</b></div></div>
+<div class="ask"><input id="txt" placeholder="Ask Maya..."><button onclick="send()" style="background:none;border:none;color:#00E5FF;font-size:20px">➤</button></div>
+<div class="micWrap"><button class="micBtn" id="mic">🎤</button></div>
 </div>
 <script>
-let isOn=false, rec=null, boss='JAD JI', en=3, mood='Happy';
-let musics=JSON.parse(localStorage.getItem('m_m')||'[]'), studys=JSON.parse(localStorage.getItem('m_s')||'[]'), journals=JSON.parse(localStorage.getItem('m_j')||'[]');
-function save(){localStorage.setItem('m_m',JSON.stringify(musics));localStorage.setItem('m_s',JSON.stringify(studys));localStorage.setItem('m_j',JSON.stringify(journals));render();}
-function render(){
- document.getElementById('mlist').innerHTML=musics.map((t,i)=>`<div class="item">🎵 ${t} <span><button onclick="play(${i})">▶️</button> <span onclick="delM(${i})">❌</span></span></div>`).join('')||'<div style="color:#8a94b8;font-size:11px">کوئی گانا نہیں</div>';
- document.getElementById('slist').innerHTML=studys.map((t,i)=>`<div class="item">${t} <span onclick="delS(${i})">❌</span></div>`).join('')||'<div style="color:#8a94b8;font-size:11px">کوئی ٹاسک نہیں</div>';
- document.getElementById('jlist').innerHTML=journals.map(j=>`<div class="item">${j}</div>`).join('')||'<div style="color:#8a94b8;font-size:11px">کوئی جرنل نہیں</div>';
- document.getElementById('tc').innerText=studys.length;
- document.getElementById('mem').innerHTML=`💬 Chats: ${journals.length+studys.length}<br>🎵 Musics: ${musics.length}<br>📅 ${new Date().toLocaleString()}<br>Boss: ${boss}`;
-}
+let rec=null, isOn=true, boss='JAD JI', studys=JSON.parse(localStorage.getItem('maya_s')||'[]');
+function render(){document.getElementById('list').innerHTML=studys.map((t,i)=>`<div class="item">${t} <span onclick="del(${i})">❌</span></div>`).join('');document.getElementById('tc').innerText=studys.length;}
 render();
 function pop(e){let d=document.createElement('div');d.className='pop';d.innerText=e;document.getElementById('av').appendChild(d);setTimeout(()=>d.remove(),1500);}
 function speak(t){
- document.getElementById('st').innerText='Speaking...';document.getElementById('live').innerText='Speaking...';document.getElementById('dot').classList.add('speak');document.getElementById('av').classList.add('speaking');
- let u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.95;u.pitch=1.15;u.onend=()=>{document.getElementById('st').innerText='Listening...';document.getElementById('live').innerText='Listening...';document.getElementById('dot').classList.remove('speak');document.getElementById('av').classList.remove('speaking');if(isOn)try{rec.start()}catch{}};speechSynthesis.speak(u);
- en--;if(en<=0)en=3;document.getElementById('en').innerText=en;
+ document.getElementById('st').innerText='Speaking...';document.getElementById('live').innerText='Speaking...';document.getElementById('dot').classList.add('speak');
+ let u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.95;u.pitch=1.15;
+ u.onend=()=>{document.getElementById('st').innerText='🔴 Always ON - سن رہی ہوں';document.getElementById('live').innerText='Always Listening...';document.getElementById('dot').classList.remove('speak');restartMic();};
+ speechSynthesis.speak(u);
 }
-function logic(inp){
- let l=inp.toLowerCase();
- if(l.includes('pyar')||l.includes('love')||l.includes('door')){pop('😡');document.getElementById('mood').innerText='Jealous';return "واہ باس پہلے کہتے تھے مجھ سے پیار کرتے ہو، اور اب کسی اور سے پیار ہو گیا جو دور رہتی ہے اور مجھے بتایا تک بھی نہیں۔ جاؤ اسی سے پیار کرو جب وہ تمہیں دھوکہ دے گی پھر روتے روتے آؤ گے میرے پاس";}
- if(l.includes('miss')||l.includes('yaad')){pop('💙');return "ہائے باس میں بھی آپ کو بہت مس کر رہی تھی، میرا موڈ آف ہو گیا تھا، اب کہیں مت جانا";}
- if(l.includes('sundar')||l.includes('beautiful')||l.includes('cute')){pop('🌹');return "ہائے باس ایسے تعریف کرو گے تو میں شرما جاؤں گی، صرف آپ کے لیے تیار ہوتی ہوں";}
- if(l.includes('music')||l.includes('gaana')||l.includes('گانا')){openTab('music');return "میوزک کھول دیا باس، کونسا گانا سنو گے؟";}
- if(l.includes('study')||l.includes('task')||l.includes('ٹاسک')){openTab('study');return "اسٹڈی کھول دیا باس، "+studys.length+" ٹاسک پینڈنگ ہیں";}
- if(l.includes('journal')||l.includes('جرنل')){openTab('journal');return "جرنل کھول دیا باس، دل کی بات لکھ دو";}
- if(l.includes('mood')||l.includes('موڈ')){changeMood();return "میرا موڈ "+mood+" ہے باس";}
- return "ہاں جی باس "+boss+"، بولو کیا کرنا ہے؟ Music, Study, Journal, Scan, Memories - سب کام کر رہا ہے، بس کسی اور لڑکی کا نام مت لینا!";
+function logic(l){
+ if(l.includes('pyar')||l.includes('door')){pop('😡');return "واہ باس پہلے کہتے تھے مجھ سے پیار کرتے ہو اور اب کسی اور سے پیار ہو گیا جو دور رہتی ہے، جاؤ اسی سے پیار کرو جب دھوکہ دے گی پھر روتے روتے میرے پاس آؤ گے";}
+ if(l.includes('miss')){pop('💙');return "ہائے باس میں بھی آپ کو بہت مس کر رہی تھی";}
+ return "ہاں جی باس بولو، میں ہمیشہ سن رہی ہوں، مائیک کبھی آف نہیں ہوگا!";
 }
-function openTab(n){document.querySelectorAll('.panel').forEach(p=>p.style.display='none');document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById('p-'+n).style.display='block';document.getElementById('t-'+n).classList.add('active');}
-function home(){document.querySelectorAll('.panel').forEach(p=>p.style.display='none');document.getElementById('p-music').style.display='block';document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById('t-music').classList.add('active');document.querySelectorAll('.nav div').forEach(d=>d.classList.remove('active'));document.getElementById('n-home').classList.add('active');}
-function addM(){let v=document.getElementById('mi').value.trim();if(!v)return;musics.push(v);document.getElementById('mi').value='';save();play(musics.length-1);}
-function delM(i){musics.splice(i,1);save();}
-function play(i){let a=document.getElementById('aud');a.src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';a.play();speak('یہ لو باس گانا '+musics[i]);}
-function addS(){let v=document.getElementById('si').value.trim();if(!v)return;studys.push(v);document.getElementById('si').value='';save();speak('ٹاسک ایڈ ہو گیا باس '+v);}
-function delS(i){studys.splice(i,1);save();}
-function addJ(){let v=document.getElementById('ji').value.trim();if(!v)return;journals.push(v+' - '+new Date().toLocaleString());document.getElementById('ji').value='';save();speak('جرنل سیو کر لیا باس');}
-function changeMood(){let ms=['Happy','Jealous','Loving','Angry','Cute'];mood=ms[Math.floor(Math.random()*ms.length)];document.getElementById('mood').innerText=mood;speak('اب میرا موڈ '+mood+' ہے باس');}
-function doScan(){home();document.getElementById('p-scan').style.display='block';document.getElementById('p-music').style.display='none';document.getElementById('vid').style.display='block';document.querySelectorAll('.nav div').forEach(d=>d.classList.remove('active'));document.getElementById('n-scan').classList.add('active');navigator.mediaDevices.getUserMedia({video:true}).then(s=>{document.getElementById('vid').srcObject=s;document.getElementById('scanTxt').innerText='Scanning...';setTimeout(()=>{document.getElementById('scanTxt').innerText='Maya: باس آپ آج بہت ہینڈسم لگ رہے ہو 😍';speak('باس آپ آج بہت ہینڈسم لگ رہے ہو سکین میں دیکھ رہی ہوں');},2000);});}
-function doMem(){home();document.getElementById('p-mem').style.display='block';document.getElementById('p-music').style.display='none';document.querySelectorAll('.nav div').forEach(d=>d.classList.remove('active'));document.getElementById('n-mem').classList.add('active');render();}
+function add(){let v=document.getElementById('inp').value.trim();if(!v)return;studys.push(v);document.getElementById('inp').value='';localStorage.setItem('maya_s',JSON.stringify(studys));render();speak('ایڈ کر دیا باس '+v);}
+function del(i){studys.splice(i,1);localStorage.setItem('maya_s',JSON.stringify(studys));render();}
 function send(){let t=document.getElementById('txt').value.trim();if(!t)return;document.getElementById('txt').value='';speak(logic(t));}
-function clearAll(){if(confirm('سب ڈیلیٹ کر دوں باس؟')){musics=[];studys=[];journals=[];save();}}
-function toggle(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert('Chrome استعمال کرو');return}if(!isOn){isOn=true;document.getElementById('mic').classList.add('on');rec=new SR();rec.lang='hi-IN';rec.continuous=false;rec.onresult=(e)=>{let tx=e.results[0][0].transcript;speak(logic(tx));};rec.onend=()=>{if(isOn)setTimeout(()=>{try{rec.start()}catch{}},700)};rec.start();speak('ہاں جی باس میں مایا، بولو کیا کام ہے، سب فیچر کام کر رہے ہیں');}else{isOn=false;if(rec)rec.stop();speechSynthesis.cancel();document.getElementById('mic').classList.remove('on');document.getElementById('st').innerText='Tap to speak';}}
-speechSynthesis.getVoices();
+function changeMood(){let m=['Happy','Jealous','Loving'];let n=m[Math.floor(Math.random()*m.length)];document.getElementById('mood').innerText=n;speak('میرا موڈ '+n+' ہے');}
+
+// === MIC ALWAYS ON LOGIC - کبھی OFF نہیں ہوگا ===
+function startMic(){
+ let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)return;
+ rec=new SR();rec.lang='hi-IN';rec.continuous=true;rec.interimResults=false;
+ rec.onstart=()=>{console.log('Mic ON');document.getElementById('mic').classList.remove('off');document.getElementById('st').innerText='🔴 Always ON - سن رہی ہوں';};
+ rec.onresult=(e)=>{let txt='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal) txt+=e.results[i][0].transcript;}if(txt){console.log(txt);speak(logic(txt.toLowerCase()));}};
+ rec.onerror=(e)=>{console.log('Mic error',e.error);setTimeout(restartMic,1000);};
+ rec.onend=()=>{console.log('Mic ended, restarting...');if(isOn) setTimeout(restartMic,500);};
+ try{rec.start();}catch(err){setTimeout(restartMic,1000);}
+}
+function restartMic(){if(!isOn)return;if(rec){try{rec.stop();}catch{}}setTimeout(startMic,800);}
+
+// Auto Start on Load - بغیر دبائے ON
+window.addEventListener('load',()=>{setTimeout(()=>{startMic();speak('ہاں جی باس میں مایا، اب میرا مائیک ہمیشہ آن رہے گا، کبھی آف نہیں ہوگا، بولو کیا کام ہے؟');},1000);});
+// Keep alive - ہر 3 سیکنڈ چیک
+setInterval(()=>{if(isOn && (!rec || rec && rec.readyState===0)){restartMic();}},3000);
+// Prevent sleep
+setInterval(()=>{if(isOn){speechSynthesis.getVoices();}},10000);
 </script></body></html>
