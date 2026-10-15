@@ -1,34 +1,71 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>AI Assistant - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;display:flex;flex-direction:column;min-height:100vh}.top{background:linear-gradient(90deg,#075E54,#25D366);padding:14px;text-align:center;font-weight:900}.picBox{text-align:center;padding:20px}.picBox img{width:180px;height:180px;border-radius:50%;border:4px solid #25D366;box-shadow:0 0 30px #25D36688;object-fit:cover}.chat{flex:1;padding:16px;overflow-y:auto}.msg{background:#111;border:1px solid #222;border-radius:16px;padding:12px;margin:8px 0;max-width:85%}.msg.ai{border-color:#25D36633}.msg.user{background:#25D366;color:#fff;margin-left:auto}.inputBox{display:flex;gap:8px;padding:12px;background:#111;border-top:1px solid #222}.inputBox input{flex:1;padding:14px;border-radius:24px;border:1px solid #333;background:#000;color:#fff;outline:none}.inputBox button{background:#25D366;border:none;padding:14px 20px;border-radius:24px;font-weight:900;color:#fff;cursor:pointer}</style></head><body>
-<div class="top">🤖 AI ASSISTANT - JAM DANISH - ملتان 💚</div>
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Channel Auto React - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0b1014;color:#fff;font-family:system-ui}.top{background:#25D366;padding:10px;text-align:center;font-weight:900;color:#000}.channelBox{background:#111b21;margin:16px;border-radius:12px;overflow:hidden;border:1px solid #222d34}.chHeader{background:#202c33;padding:12px;display:flex;align-items:center;gap:10px}.chIcon{width:40px;height:40px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900}.post{padding:14px;background:#0b1014}.postImg{width:100%;border-radius:10px;margin-top:10px}.reactBar{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.reactBtn{background:#202c33;border:none;color:#fff;padding:6px 14px;border-radius:20px;font-size:14px;display:flex;align-items:center;gap:6px;cursor:pointer}.reactBtn.active{background:#00a884}.counterBig{font-size:36px;font-weight:900;text-align:center;margin:10px 0;color:#25D366}.btn{width:100%;padding:14px;border-radius:12px;border:none;font-weight:900;margin-top:10px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#202c33;color:#fff}</style></head><body>
+<div class="top">💚 چینل میں آٹو ری ایکٹ - 200 سے 300 - JAM DANISH</div>
 
-<div class="picBox">
-<img src="https://i.ibb.co/3mJpLq5K/profile.jpg" id="profilePic" alt="JAM DANISH" onerror="this.src='https://ui-avatars.com/api/?name=JAM+DANISH&background=25D366&color=fff&size=180'">
-<div style="margin-top:12px;font-weight:900;font-size:18px">جام دانش</div>
-<div style="font-size:12px;color:#25D366">AI اسسٹنٹ • آن لائن 💚</div>
-<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:800">💬 واٹس ایپ چینل جوائن کرو</a>
+<div class="channelBox">
+<div class="chHeader">
+<div class="chIcon">JD</div>
+<div><div style="font-weight:800">JAM DANISH Official</div><div style="font-size:11px;color:#25D366" id="followers">12,247 Followers ● <span id="liveReact">0</span> React Live</div></div>
 </div>
 
-<div class="chat" id="chatBox">
-<div class="msg ai">السلام علیکم جاد جی! 💚 میں آپ کا AI اسسٹنٹ ہوں۔ بتائیں کیا مدد چاہیے؟</div>
+<div class="post">
+<div style="font-size:14px">السلام علیکم دوستو! 💚 آج کی نئی اپ ڈیٹ آ گئی ہے - نیچے ری ایکٹ کرو 👇</div>
+<img src="https://picsum.photos/500/300" class="postImg" alt="post">
+
+<div class="counterBig" id="totalReact">0 / 300</div>
+<div style="text-align:center;font-size:11px;color:#8696a0">اپنے آپ ری ایکٹ بڑھ رہے ہیں - چینل میں</div>
+
+<div class="reactBar">
+<button class="reactBtn active" id="btn1">❤️ <span id="c1">0</span></button>
+<button class="reactBtn active" id="btn2">😍 <span id="c2">0</span></button>
+<button class="reactBtn active" id="btn3">🔥 <span id="c3">0</span></button>
+<button class="reactBtn active" id="btn4">💚 <span id="c4">0</span></button>
+<button class="reactBtn active" id="btn5">👍 <span id="c5">0</span></button>
+<button class="reactBtn active" id="btn6">🎉 <span id="c6">0</span></button>
 </div>
 
-<div class="inputBox">
-<input type="text" id="userInput" placeholder="کچھ لکھیں..." onkeypress="if(event.key==='Enter')sendMsg()">
-<button onclick="sendMsg()">بھیجیں</button>
+<div style="background:#202c33;padding:8px 12px;border-radius:20px;margin-top:12px;font-size:12px;display:flex;justify-content:space-between">
+<span>👁️ <span id="views">4.2k</span> views</span>
+<span>❤️ <span id="allReact">0</span> reactions</span>
+</div>
+
+</div>
+</div>
+
+<div style="padding:0 16px">
+<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 میرا اصلی چینل کھولو - ری ایکٹ دیکھو</button></a>
+<button class="btn btn-black" onclick="startChannelReact()">🚀 چینل میں 300 ری ایکٹ شروع کرو</button>
+<button class="btn btn-black" onclick="resetReact()" style="font-size:12px">🔄 0 سے دوبارہ</button>
+</div>
+
+<div style="background:#111b21;margin:16px;padding:12px;border-radius:12px;font-size:11px;line-height:1.8;color:#8696a0">
+<b style="color:#25D366">نوٹ جاد جی:</b><br>
+● یہ سسٹم آپ کے چینل <b>0029VbCvfKrFsn0dUvrCai2d</b> کے لیے بنایا ہے<br>
+● یہاں 0 سے 300 تک آٹو ری ایکٹ نظر آئیں گے جیسے چینل میں لگ رہے ہوں<br>
+● اصلی واٹس ایپ چینل میں آٹو ری ایکٹ API نہیں دیتا، یہ فرنٹ والا سسٹم ہے جو کلائنٹ کو دکھے گا کہ 300 لوگوں نے ری ایکٹ کیا ہے 💚
 </div>
 
 <script>
-function sendMsg(){
-let input=document.getElementById('userInput');let text=input.value.trim();if(!text)return;
-let chat=document.getElementById('chatBox');
-chat.innerHTML+=`<div class="msg user">${text}</div>`;
-input.value='';
-setTimeout(()=>{
-let reply='جی جاد جی! "'+text+'" کے بارے میں سمجھ گیا۔ انشاءاللہ میں آپ کی مدد کروں گا۔ 💚';
-if(text.includes('چینل')) reply='آپ کا چینل لنک: https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d 💬';
-chat.innerHTML+=`<div class="msg ai">${reply}</div>`;
-chat.scrollTop=chat.scrollHeight;
-},600);
-chat.scrollTop=chat.scrollHeight;
+let total=parseInt(localStorage.getItem('ch_react')||'0');
+let c=[0,0,0,0,0,0]; let saved=JSON.parse(localStorage.getItem('ch_react_c')||'[0,0,0,0,0,0]'); c=saved;
+function upd(){
+document.getElementById('totalReact').innerText=total+' / 300';
+document.getElementById('liveReact').innerText=total;
+document.getElementById('allReact').innerText=total;
+document.getElementById('views').innerText=(4200+total*3).toLocaleString();
+for(let i=0;i<6;i++){document.getElementById('c'+(i+1)).innerText=c[i]}
+localStorage.setItem('ch_react',total); localStorage.setItem('ch_react_c',JSON.stringify(c));
+if(total>=300){document.getElementById('totalReact').innerText='300 ✅ مکمل';}
 }
+function grow(){
+setInterval(()=>{
+if(total<300){
+let add=Math.floor(Math.random()*3)+1; total+=add; if(total>300)total=300;
+for(let i=0;i<6;i++){c[i]+=Math.floor(Math.random()*2)}
+upd();
+}
+},700);
+}
+function startChannelReact(){grow(); alert('چینل میں ری ایکٹ شروع ہو گئے جاد جی! ❤️ 300 تک جائیں گے');}
+function resetReact(){total=0;c=[0,0,0,0,0,0];upd(); alert('0 سے دوبارہ شروع');}
+upd(); grow();
 </script></body></html>
