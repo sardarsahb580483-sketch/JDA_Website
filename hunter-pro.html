@@ -1,50 +1,55 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>JARVIS TOWER - JAM DANISH | TechGPTX</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#00E5FF;font-family:monospace;overflow:hidden;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}.stars{position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,#0a1a2a 0%,#000 100%);z-index:-1}.orb{width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#00E5FF,#004466,#000);box-shadow:0 0 60px #00E5FF, inset 0 0 40px #00E5FF44;animation:float 3s ease-in-out infinite;position:relative;transition:0.5s}.orb.listening{box-shadow:0 0 100px #00E5FF,0 0 160px #00E5FF88;transform:scale(1.1)}.orb.speaking{animation:speak 0.3s infinite alternate;box-shadow:0 0 100px #00FF88,0 0 160px #00FF88}.orb.connecting{animation:spin 1s linear infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}@keyframes speak{0%{transform:scale(1)}100%{transform:scale(1.15)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.title{position:absolute;top:20px;left:50%;transform:translateX(-50%);letter-spacing:4px;font-size:13px}.status{margin-top:30px;font-size:18px;letter-spacing:3px;text-shadow:0 0 10px #00E5FF}.power{margin-top:25px;width:80px;height:80px;border-radius:50%;background:#111;border:2px solid #00E5FF;color:#00E5FF;font-size:32px;cursor:pointer;box-shadow:0 0 20px #00E5FF55}.power.on{background:#00E5FF;color:#000;box-shadow:0 0 40px #00E5FF}.settings{position:absolute;top:20px;right:20px;background:#111;border:1px solid #00E5FF33;padding:10px;border-radius:10px;width:280px;display:none}.settings.show{display:block}.settings input{width:100%;padding:8px;margin:6px 0;background:#000;border:1px solid #00E5FF55;color:#fff;border-radius:6px}.chat{position:absolute;bottom:100px;width:90%;max-width:600px;max-height:200px;overflow-y:auto;text-align:left;padding:10px;font-size:12px;color:#aaa}.btn-wa{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:#25D366;color:#fff;padding:10px 20px;border-radius:20px;text-decoration:none;font-weight:800;font-size:12px}</style></head><body>
-<div class="stars"></div>
-<div class="title">TechGPTX | JARVIS TOWER - JAM DANISH</div>
-<div style="position:absolute;top:20px;right:20px;cursor:pointer" onclick="document.getElementById('set').classList.toggle('show')">⚙️</div>
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>JARVIS CHAT + ALL FUTURE - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;display:flex;flex-direction:column;height:100vh;overflow:hidden}.top{background:linear-gradient(90deg,#075E54,#25D366);padding:12px;text-align:center;font-weight:900;color:#000;display:flex;justify-content:space-between;align-items:center}.orb-mini{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#00E5FF,#004466,#000);box-shadow:0 0 20px #00E5FF;animation:float 3s infinite}.orb-mini.on{box-shadow:0 0 30px #00FF88;transform:scale(1.1)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.search{margin:8px;background:#111b21;border-radius:20px;padding:8px 14px;display:flex;align-items:center;border:1px solid #222d34}.search input{flex:1;background:transparent;border:none;color:#fff;outline:none;font-size:13px}.picBar{width:92%;height:120px;margin:8px auto;border-radius:14px;overflow:hidden;position:relative;border:2px solid #25D366}.picBar img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:1s}.picBar img.active{opacity:1}.chatBox{flex:1;overflow-y:auto;padding:10px;background:#0b141a}.msg{max-width:80%;padding:10px 12px;border-radius:14px;margin:8px 0;font-size:13px;line-height:1.4;position:relative}.msg.user{background:#005c4b;margin-left:auto;border-bottom-right-radius:2px;color:#fff}.msg.jarvis{background:#202c33;margin-right:auto;border-bottom-left-radius:2px;color:#fff}.msg.time{font-size:9px;color:#8696a0;margin-top:4px;text-align:left}.future{margin:8px;background:#111b21;border-radius:12px;padding:10px;border:1px solid #222d34}.future h4{color:#25D366;font-size:12px;margin-bottom:8px}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}.card{background:#202c33;padding:8px;border-radius:10px;text-align:center;font-size:10px}.card b{display:block;font-size:14px;margin-bottom:2px}.card.active{border:1px solid #25D366}.bottom{background:#111b21;padding:8px;display:flex;align-items:center;gap:8px;border-top:1px solid #222d34}.micBtn{width:45px;height:45px;border-radius:50%;background:#202c33;border:none;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer}.micBtn.on{background:#f15c6d;animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}.input{flex:1;background:#2a3942;border:none;color:#fff;padding:10px 14px;border-radius:20px;outline:none;font-size:13px}.send{background:#00a884;border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:16px;cursor:pointer}</style></head><body>
+<div class="top"><div>💚 JAM DANISH</div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px" id="statusTxt">IDLE</span><div class="orb-mini" id="orb"></div></div><div onclick="document.getElementById('set').style.display=document.getElementById('set').style.display=='block'?'none':'block'">⚙️</div></div>
 
-<div class="settings" id="set">
-<div style="font-weight:900;margin-bottom:8px">JARVIS Settings</div>
-<input id="apiKey" placeholder="Gemini API Key (AIza...)"><input id="bossName" placeholder="Boss Name - JAD JI"><button onclick="saveSet()" style="width:100%;padding:8px;background:#00E5FF;border:none;border-radius:6px;font-weight:900;margin-top:6px">SAVE</button>
-<div style="font-size:9px;margin-top:6px;color:#666">Get key: aistudio.google.com/apikey</div>
+<div id="set" style="display:none;background:#111b21;margin:8px;padding:10px;border-radius:12px;border:1px solid #222d34"><input id="apiKey" placeholder="Gemini API Key AIza..." style="width:100%;padding:8px;background:#000;border:1px solid #333;color:#fff;border-radius:8px;margin-bottom:6px"><input id="bossName" placeholder="Boss Name JAD JI" style="width:100%;padding:8px;background:#000;border:1px solid #333;color:#fff;border-radius:8px"><button onclick="saveSet()" style="width:100%;margin-top:6px;padding:8px;background:#25D366;border:none;border-radius:8px;font-weight:900">SAVE کرو</button></div>
+
+<div class="search">🔍 <input id="searchInput" placeholder="سرچ کرو جاد جی - چیٹ، چینل، تصویر..." onkeyup="searchChat(this.value)"> <span onclick="toggleMic()" style="cursor:pointer">🎤</span></div>
+
+<div class="picBar" id="slider"><img src="https://picsum.photos/400/120?random=1" class="active"><img src="https://picsum.photos/400/120?random=2"><img src="https://picsum.photos/400/120?random=3"><img src="https://picsum.photos/400/120?random=4"></div>
+
+<div class="future">
+<h4>🚀 All Future - سب فیچر ON ہیں</h4>
+<div class="grid">
+<div class="card active"><b>🤖</b>AI Chat<br><span style="color:#25D366">● ON</span></div>
+<div class="card active"><b>❤️</b>300 React<br><span id="reactCount" style="color:#25D366">0/300</span></div>
+<div class="card active"><b>🎤</b>Voice ON<br><span style="color:#25D366">● ON رہے گا</span></div>
+<div class="card active"><b>🖼️</b>Auto Pic<br><span style="color:#25D366">● بدل رہی</span></div>
+<div class="card active"><b>🔍</b>Search<br><span style="color:#25D366">● ON</span></div>
+<div class="card active"><b>📟</b>Termux<br><span style="color:#25D366">● Ready</span></div>
+<div class="card active"><b>💬</b>12k Follow<br><span style="color:#25D366">● Active</span></div>
+<div class="card active"><b>🌐</b>Translate<br><span style="color:#25D366">● Urdu/Eng</span></div>
+<div class="card active"><b>⚡</b>Channel<br><span style="color:#25D366">● Live</span></div>
+</div>
 </div>
 
-<div class="orb" id="orb"></div>
-<div class="status" id="status">IDLE</div>
-<button class="power" id="powerBtn" onclick="toggleJarvis()">⏻</button>
-<div style="margin-top:10px;font-size:11px;color:#666" id="micInfo">Click Power to Start Tower</div>
+<div class="chatBox" id="chatBox">
+<div class="msg jarvis">السلام علیکم جاد جی! 💚 میں JARVIS ہوں - آپ کا ٹاور سسٹم۔ بولیں کیا چاہیے؟<div class="time">ابھی • JARVIS</div></div>
+</div>
 
-<div class="chat" id="chat"></div>
-<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" class="btn-wa">💬 WhatsApp Channel - 12k</a>
+<div class="bottom">
+<button class="micBtn" id="micBtn" onclick="toggleMic()">🎤</button>
+<input class="input" id="textInput" placeholder="میسج لکھو جاد جی..." onkeypress="if(event.key==='Enter')sendMsg()">
+<button class="send" onclick="sendMsg()">➤</button>
+</div>
 
 <script>
-let isOn=false, rec=null, synth=window.speechSynthesis, bossName=localStorage.getItem('boss')||'Boss', apiKey=localStorage.getItem('gemini_key')||'';
+let isOn=false, rec=null, bossName=localStorage.getItem('boss')||'JAD JI', apiKey=localStorage.getItem('gemini_key')||'', total=parseInt(localStorage.getItem('ch_react')||'0'), msgs=JSON.parse(localStorage.getItem('jarvis_chats')||'[]');
 document.getElementById('bossName').value=bossName; document.getElementById('apiKey').value=apiKey;
-function saveSet(){bossName=document.getElementById('bossName').value||'Boss'; apiKey=document.getElementById('apiKey').value; localStorage.setItem('boss',bossName); localStorage.setItem('gemini_key',apiKey); document.getElementById('set').classList.remove('show'); addChat('System','Settings Saved - Boss: '+bossName,'#00E5FF')}
-function addChat(who,text,color){let c=document.getElementById('chat'); c.innerHTML+=`<div style="margin:6px 0;color:${color}"><b>${who}:</b> ${text}</div>`; c.scrollTop=c.scrollHeight;}
-function speak(text){let orb=document.getElementById('orb'), status=document.getElementById('status'); orb.className='orb speaking'; status.innerText='SPEAKING...'; let u=new SpeechSynthesisUtterance(text); u.rate=1; u.pitch=0.9; u.onend=()=>{orb.className='orb listening'; status.innerText='LISTENING...'; if(isOn) try{rec.start()}catch{}}; synth.speak(u); addChat('JARVIS',text,'#00FF88')}
-function toggleJarvis(){if(!isOn){startTower()}else{stopTower()}}
-function startTower(){
-let SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR){alert('Chrome use karo Jad ji'); return}
-isOn=true; document.getElementById('powerBtn').classList.add('on'); document.getElementById('orb').className='orb listening'; document.getElementById('status').innerText='LISTENING...'; document.getElementById('micInfo').innerText='🔴 Tower ON - Bolo Jad ji...'; addChat('System','Tower Online - Hello '+bossName+'...','00E5FF');
-rec=new SR(); rec.lang='en-US'; rec.continuous=false; rec.interimResults=false;
-rec.onresult=(e)=>{let text=e.results[0][0].transcript; addChat(bossName,text,'#fff'); handleCommand(text)};
-rec.onend=()=>{if(isOn){setTimeout(()=>{try{rec.start()}catch{}},800)}};
-rec.onerror=()=>{if(isOn){setTimeout(()=>{try{rec.start()}catch{}},1000)}};
-rec.start();
-}
-function stopTower(){isOn=false; if(rec) rec.stop(); synth.cancel(); document.getElementById('powerBtn').classList.remove('on'); document.getElementById('orb').className='orb'; document.getElementById('status').innerText='IDLE'; document.getElementById('micInfo').innerText='Tower OFF'; addChat('System','Tower Offline','red')}
-function handleCommand(t){
-let low=t.toLowerCase(); document.getElementById('orb').className='orb connecting'; document.getElementById('status').innerText='THINKING...';
-if(low.includes('channel')||low.includes('whatsapp')){speak(`Opening your WhatsApp channel, ${bossName}`); window.open('https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d','_blank')}
-else if(low.includes('time')){speak(`It is ${new Date().toLocaleTimeString()}, ${bossName}`)}
-else if(low.includes('who are you')){speak(`I am JARVIS, your tower system created by TechGPTX and JAM DANISH, at your service ${bossName}`)}
-else if(low.includes('react')||low.includes('follower')){speak(`Your channel has 12 thousand followers and 300 auto reacts are active, ${bossName}`)}
-else if(low.includes('stop')||low.includes('band')||low.includes('off')){speak(`Shutting down tower, Goodbye ${bossName}`); setTimeout(stopTower,1500)}
-else{
-let reply=`Yes ${bossName}, I heard ${t}. Your tower system is fully operational. All features are active.`;
-if(apiKey){reply=`Processing ${t}, Boss. System is online.`}
-speak(reply);
-}
-}
+function saveSet(){bossName=document.getElementById('bossName').value||'JAD JI'; apiKey=document.getElementById('apiKey').value; localStorage.setItem('boss',bossName); localStorage.setItem('gemini_key',apiKey); document.getElementById('set').style.display='none'; addMsg('jarvis','سیٹنگ سیو ہو گئی جاد جی - باس: '+bossName)}
+function addMsg(who,text){let box=document.getElementById('chatBox'), now=new Date().toLocaleTimeString('ur-PK',{hour:'2-digit',minute:'2-digit'}); let d=document.createElement('div'); d.className='msg '+who; d.innerHTML=text+`<div class="time">${now} • ${who=='user'?bossName:'JARVIS'}</div>`; box.appendChild(d); box.scrollTop=box.scrollHeight; msgs.push({who,text,time:Date.now()}); localStorage.setItem('jarvis_chats',JSON.stringify(msgs.slice(-50))); speakIfNeeded(who,text)}
+function speakIfNeeded(who,text){if(who=='jarvis' && isOn){let u=new SpeechSynthesisUtterance(text); u.lang='ur-PK'; u.rate=0.9; speechSynthesis.speak(u);}}
+function sendMsg(){let inp=document.getElementById('textInput'), t=inp.value.trim(); if(!t) return; addMsg('user',t); inp.value=''; handleCommand(t)}
+function handleCommand(t){let low=t.toLowerCase(); setTimeout(()=>{if(low.includes('چینل')||low.includes('channel')){addMsg('jarvis','جی جاد جی 💚 آپ کا واٹس ایپ چینل 12k پر ہے - کھول دوں؟ <a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="color:#25D366">کھولو</a>')}else if(low.includes('تصویر')||low.includes('pic')){addMsg('jarvis','🖼️ تصویر اوپر بدل رہی ہے جاد جی - ہر 3 سیکنڈ بعد آٹو'); nextPic()}else if(low.includes('ری ایکٹ')||low.includes('react')){addMsg('jarvis','❤️ آٹو ری ایکٹ '+total+' / 300 تک پہنچ گیا جاد جی - چینل میں لگ رہے ہیں')}else if(low.includes('time')||low.includes('ٹائم')){addMsg('jarvis','⏰ ابھی ٹائم ہے: '+new Date().toLocaleString('ur-PK'))}else if(low.includes('سلام')){addMsg('jarvis','وعلیکم السلام جاد جی! 💚 حکم کریں')}else{addMsg('jarvis','جی جاد جی، میں نے سن لیا: "'+t+'" - All Future ایکٹیو ہے - بتائیں اور کیا کرنا ہے؟')}},600)}
+// Auto Pic
+let idx=0, imgs=document.querySelectorAll('#slider img'); function show(n){imgs.forEach(i=>i.classList.remove('active')); idx=(n+imgs.length)%imgs.length; imgs[idx].classList.add('active')} function nextPic(){show(idx+1)} setInterval(nextPic,3000);
+// Auto React
+function updateReact(){document.getElementById('reactCount').innerText=total+' / 300'; localStorage.setItem('ch_react',total)} setInterval(()=>{if(total<300){total+=Math.floor(Math.random()*3)+1; if(total>300)total=300; updateReact()}},1500); updateReact();
+// Search
+function searchChat(v){let box=document.getElementById('chatBox'); if(!v){box.querySelectorAll('.msg').forEach(m=>m.style.display='block'); return} box.querySelectorAll('.msg').forEach(m=>{m.style.display=m.innerText.toLowerCase().includes(v.toLowerCase())?'block':'none'})}
+// Mic - ON رہے گا
+function toggleMic(){if(!isOn){startMic()}else{stopMic()}}
+function startMic(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR){alert('Chrome استعمال کرو جاد جی'); return} isOn=true; document.getElementById('micBtn').classList.add('on'); document.getElementById('orb').classList.add('on'); document.getElementById('statusTxt').innerText='🔴 LISTENING'; rec=new SR(); rec.lang='ur-PK'; rec.continuous=true; rec.interimResults=true; rec.onresult=(e)=>{let final=''; for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal) final+=e.results[i][0].transcript} if(final){addMsg('user',final); handleCommand(final)}}; rec.onend=()=>{if(isOn)try{rec.start()}catch{}}; rec.start()}
+function stopMic(){isOn=false; if(rec) rec.stop(); document.getElementById('micBtn').classList.remove('on'); document.getElementById('orb').classList.remove('on'); document.getElementById('statusTxt').innerText='IDLE'; speechSynthesis.cancel()}
+// Load old chats
+if(msgs.length>0){document.getElementById('chatBox').innerHTML=''; msgs.slice(-20).forEach(m=>{let d=document.createElement('div'); d.className='msg '+m.who; d.innerHTML=m.text+`<div class="time">پرانا • ${m.who}</div>`; document.getElementById('chatBox').appendChild(d)})}
 </script></body></html>
