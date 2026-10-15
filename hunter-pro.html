@@ -1,57 +1,50 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Mic On Off Fix - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;text-align:center}.top{background:#25D366;padding:12px;font-weight:900;color:#000}.micWrap{margin:30px auto}.mic{width:130px;height:130px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:60px;cursor:pointer;transition:0.3s}.mic.off{background:#222;border:3px solid #333;box-shadow:0 0 0px #000}.mic.on{background:linear-gradient(135deg,#ff0000,#990000);border:3px solid #ff0000;box-shadow:0 0 40px #ff0000;animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}.status{font-weight:900;margin-top:15px;font-size:16px}.status.on{color:#ff4444}.status.off{color:#888}.box{background:#111;border:1px solid #222;border-radius:16px;margin:12px;padding:14px;text-align:right}.btn{width:100%;padding:14px;border-radius:12px;border:none;font-weight:900;margin-top:10px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#222;color:#fff;border:1px solid #333}</style></head><body>
-<div class="top">🎤 مائیک ON/OFF سسٹم - ٹھیک ہو گیا - JAM DANISH</div>
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Auto Pic Change - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;text-align:center}.top{background:#25D366;padding:12px;font-weight:900;color:#000}.picSlider{position:relative;width:100%;max-width:400px;height:400px;margin:16px auto;border-radius:20px;overflow:hidden;border:3px solid #25D366;box-shadow:0 0 30px #25D36666}.picSlider img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 1s ease-in-out}.picSlider img.active{opacity:1}.dots{display:flex;justify-content:center;gap:6px;margin-top:10px}.dot{width:8px;height:8px;background:#333;border-radius:50%}.dot.active{background:#25D366}.mic{width:90px;height:90px;border-radius:50%;margin:12px auto;display:flex;align-items:center;justify-content:center;font-size:40px;cursor:pointer;transition:0.3s}.mic.off{background:#222;border:2px solid #333}.mic.on{background:linear-gradient(135deg,#ff0000,#990000);box-shadow:0 0 30px #ff0000;animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}.box{background:#111;border:1px solid #222;border-radius:16px;margin:12px;padding:14px;text-align:right}.btn{width:100%;padding:12px;border-radius:12px;border:none;font-weight:900;margin-top:8px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#222;color:#fff;border:1px solid #333}</style></head><body>
+<div class="top">🖼️ تصویر بدلتی رہے گی + مائیک - JAM DANISH</div>
 
-<div class="micWrap">
-<div class="mic off" id="micBtn" onclick="toggleMic()">🎤</div>
-<div class="status off" id="statusTxt">مائیک OFF ہے - کلک کرو ON کرنے کے لیے</div>
-<div style="margin-top:8px;font-size:11px;color:#666">ON کرو تو ON رہے گا، OFF کرو تو OFF ہوگا</div>
+<div class="picSlider" id="slider">
+<img src="https://picsum.photos/400/400?random=1" class="active" alt="pic1">
+<img src="https://picsum.photos/400/400?random=2" alt="pic2">
+<img src="https://picsum.photos/400/400?random=3" alt="pic3">
+<img src="https://picsum.photos/400/400?random=4" alt="pic4">
+<img src="https://picsum.photos/400/400?random=5" alt="pic5">
+<img src="https://picsum.photos/400/400?random=6" alt="pic6">
 </div>
+<div class="dots" id="dots"></div>
+<div style="font-size:11px;color:#25D366;margin-top:6px">ہر 3 سیکنڈ بعد تصویر خود بدل رہی ہے 💚</div>
+
+<div style="display:flex;justify-content:center;gap:8px;margin-top:10px">
+<button class="btn-black" style="padding:8px 16px;border-radius:20px;border:1px solid #333;color:#fff" onclick="prevPic()">⏮️ پچھلی</button>
+<div class="mic off" id="micBtn" onclick="toggleMic()">🎤</div>
+<button class="btn-black" style="padding:8px 16px;border-radius:20px;border:1px solid #333;color:#fff" onclick="nextPic()">اگلی ⏭️</button>
+</div>
+<div id="statusTxt" style="font-size:12px;color:#888;margin-top:4px">مائیک OFF ہے - کلک کرو ON</div>
 
 <div class="box">
 <div style="color:#25D366;font-weight:800">📝 آپ بول رہے ہو:</div>
-<div id="voiceText" style="font-size:16px;margin-top:8px;min-height:24px;color:#fff">---</div>
-</div>
-
-<div class="box">
-<div style="color:#ff4444;font-weight:800">⚙️ سسٹم کر رہا ہے:</div>
-<div id="sysReply" style="font-size:14px;margin-top:8px">سسٹم تیار ہے جاد جی</div>
+<div id="voiceText" style="font-size:15px;margin-top:6px;min-height:20px">---</div>
 </div>
 
 <div style="padding:0 12px">
-<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 واٹس ایپ چینل</button></a>
-<button class="btn btn-black" onclick="clearText()">🧹 صاف کرو</button>
+<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 واٹس ایپ چینل جوائن کرو</button></a>
+<button class="btn btn-black" onclick="changePicsNow()">🖼️ تصویریں ابھی بدلو</button>
 </div>
 
 <script>
-let isOn=false;let recognition=null;let finalText='';
-function createRec(){
-let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-if(!SR){alert('Chrome براؤزر استعمال کرو جاد جی');return null}
-let rec=new SR();rec.lang='ur-PK';rec.continuous=true;rec.interimResults=true;
-rec.onstart=()=>{document.getElementById('statusTxt').innerText='🔴 مائیک ON ہے - سن رہا ہوں... مسلسل';document.getElementById('statusTxt').className='status on';document.getElementById('micBtn').className='mic on';document.getElementById('micBtn').innerText='🔴';}
-rec.onresult=(e)=>{
-let interim='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal){finalText+=e.results[i][0].transcript+' ';}else{interim+=e.results[i][0].transcript;}}
-document.getElementById('voiceText').innerText=finalText+interim;
-if(e.results[e.results.length-1].isFinal){doAction(e.results[e.results.length-1][0].transcript);}
+let idx=0;let imgs=document.querySelectorAll('#slider img');let dotBox=document.getElementById('dots');
+imgs.forEach((_,i)=>{let d=document.createElement('div');d.className='dot'+(i==0?' active':'');dotBox.appendChild(d);});
+function show(n){imgs.forEach(i=>i.classList.remove('active'));document.querySelectorAll('.dot').forEach(d=>d.classList.remove('active'));idx=(n+imgs.length)%imgs.length;imgs[idx].classList.add('active');document.querySelectorAll('.dot')[idx].classList.add('active');}
+function nextPic(){show(idx+1)}function prevPic(){show(idx-1)}
+setInterval(()=>{nextPic()},3000);
+function changePicsNow(){document.querySelectorAll('#slider img').forEach(img=>{img.src='https://picsum.photos/400/400?random='+Math.floor(Math.random()*1000)});}
+
+// مائیک سسٹم - ON رہے گا
+let isOn=false;let rec=null;let finalText='';
+function createRec(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert('Chrome استعمال کرو جاد جی');return null}let r=new SR();r.lang='ur-PK';r.continuous=true;r.interimResults=true;
+r.onstart=()=>{document.getElementById('statusTxt').innerText='🔴 مائیک ON - سن رہا ہوں';document.getElementById('statusTxt').style.color='#ff4444';document.getElementById('micBtn').className='mic on';document.getElementById('micBtn').innerText='🔴';}
+r.onresult=(e)=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal){finalText+=e.results[i][0].transcript+' ';}else{interim+=e.results[i][0].transcript;}}document.getElementById('voiceText').innerText=finalText+interim;
+let last=e.results[e.results.length-1][0].transcript.toLowerCase();if(last.includes('تصویر')||last.includes('pic')||last.includes('بدلو')){nextPic();}
 };
-rec.onend=()=>{if(isOn){rec.start();}else{document.getElementById('statusTxt').innerText='مائیک OFF ہے - کلک کرو ON کرنے کے لیے';document.getElementById('statusTxt').className='status off';document.getElementById('micBtn').className='mic off';document.getElementById('micBtn').innerText='🎤';}}
-rec.onerror=()=>{if(isOn){setTimeout(()=>{try{rec.start()}catch{}},500);}}
-return rec;
-}
-function toggleMic(){
-if(!isOn){
-finalText='';isOn=true;recognition=createRec();if(recognition){try{recognition.start()}catch{}}
-}else{
-isOn=false;if(recognition){recognition.stop();}document.getElementById('statusTxt').innerText='مائیک OFF ہو گیا جاد جی ✅';document.getElementById('statusTxt').className='status off';document.getElementById('micBtn').className='mic off';document.getElementById('micBtn').innerText='🎤';
-}
-}
-function doAction(text){
-let t=text.toLowerCase();let replyBox=document.getElementById('sysReply');let reply='';
-if(t.includes('چینل')||t.includes('channel')){reply='چینل کھول رہا ہوں جاد جی 💬';window.open('https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d','_blank')}
-else if(t.includes('ری ایکٹ')||t.includes('react')){reply='300 ری ایکٹ سسٹم ON کر دیا ❤️';}
-else if(t.includes('بند')||t.includes('off')){reply='جی جاد جی مائیک بند کر رہا ہوں';setTimeout(()=>{toggleMic()},800)}
-else{reply='سمجھ گیا جاد جی: "'+text.trim()+'" ✅ کر دیا';}
-replyBox.innerText=reply;
-}
-function clearText(){finalText='';document.getElementById('voiceText').innerText='---';document.getElementById('sysReply').innerText='صاف ہو گیا';}
+r.onend=()=>{if(isOn){r.start();}else{document.getElementById('statusTxt').innerText='مائیک OFF ہے';document.getElementById('statusTxt').style.color='#888';document.getElementById('micBtn').className='mic off';document.getElementById('micBtn').innerText='🎤';}}
+return r;}
+function toggleMic(){if(!isOn){finalText='';isOn=true;rec=createRec();if(rec){try{rec.start()}catch{}}}else{isOn=false;if(rec){rec.stop();}}}
 </script></body></html>
