@@ -1,91 +1,92 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Maya - JAD JI</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0a0e1a;color:#fff;font-family:system-ui;display:flex;justify-content:center;min-height:100vh}.phone{width:100%;max-width:390px;background:linear-gradient(180deg,#141a2e 0%,#0a0e1a 100%);min-height:100vh;position:relative;border:2px solid transparent;background-clip:padding-box;overflow:hidden;border-radius:28px;box-shadow:0 0 0 2px #00E5FF, 0 0 30px #00E5FF55}.phone::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:28px;padding:2px;background:linear-gradient(135deg,#00E5FF,#FF00E5,#00E5FF);-webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}.header{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 8px}.header h2{font-size:16px;font-weight:700}.energy{background:#1e263f;padding:4px 10px;border-radius:20px;font-size:11px;display:flex;align-items:center;gap:4px;border:1px solid #2a3658}.greet{padding:0 18px}.greet h1{font-size:22px;font-weight:800;line-height:1.2}.greet p{font-size:13px;color:#8a94b8;margin-top:4px}.avatarWrap{position:relative;width:100%;height:380px;margin:10px 0;overflow:hidden}.avatarWrap img{width:100%;height:100%;object-fit:cover;object-position:top}.avatarWrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,#141a2e,transparent)}.statusBubble{position:absolute;bottom:90px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);padding:6px 14px;border-radius:20px;font-size:11px;border:1px solid #ffffff22;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;background:#00FF88;border-radius:50%;animation:pulse 1s infinite}.dot.speaking{background:#00E5FF}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}.tabs{display:flex;gap:8px;padding:0 18px;margin-bottom:12px}.tab{flex:1;background:#1e263f;border:1px solid #2a3658;padding:8px;border-radius:12px;text-align:center;font-size:12px;color:#cbd5e1}.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 18px;margin-bottom:12px}.card{background:#1a2138;border:1px solid #2a3658;border-radius:16px;padding:10px}.card small{font-size:9px;color:#8a94b8;display:block}.card b{font-size:14px}.card.big{font-size:22px;font-weight:800}.inputBar{display:flex;align-items:center;gap:10px;padding:12px 18px;background:#0f1424;border-top:1px solid #1e263f;margin-top:auto}.inputBar input{flex:1;background:#1e263f;border:1px solid #2a3658;color:#fff;padding:12px 16px;border-radius:24px;outline:none;font-size:13px}.micBtn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a5bd7,#00E5FF);border:none;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px #00E5FF88;cursor:pointer;transition:0.3s}.micBtn.listening{animation:micPulse 1s infinite;background:linear-gradient(135deg,#ff0055,#ff8a00)}@keyframes micPulse{0%{transform:scale(1);box-shadow:0 0 20px #ff0055}50%{transform:scale(1.1);box-shadow:0 0 40px #ff0055}100%{transform:scale(1)}}.bottomNav{display:flex;justify-content:space-around;padding:12px 0 18px;background:#0f1424;border-top:1px solid #1e263f;font-size:10px;color:#8a94b8}.bottomNav div{text-align:center}.bottomNav.active{color:#00E5FF}.emojiPop{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:80px;animation:pop 0.6s ease;pointer-events:none;z-index:10}@keyframes pop{0%{transform:translate(-50%,-50%) scale(0)}60%{transform:translate(-50%,-50%) scale(1.3)}100%{transform:translate(-50%,-50%) scale(1)}}
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Maya - All Features - JAD JI</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;display:flex;justify-content:center;min-height:100vh;font-family:system-ui}.phone{width:100%;max-width:390px;background:linear-gradient(180deg,#141a2e 0%,#0a0e1a 100%);min-height:100vh;position:relative;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 0 2px #00E5FF77}.header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px}.energy{background:#1e263f;padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid #2a3658;color:#fff}.greet{padding:0 18px 6px}.greet h1{font-size:22px;font-weight:800;color:#fff;line-height:1.2}.greet p{font-size:13px;color:#8a94b8}.avatar{position:relative;width:100%;height:340px;background:#000;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:0.3s}.avatar.speaking img{transform:scale(1.05)}.liveDot{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);padding:6px 14px;border-radius:20px;font-size:11px;color:#fff;display:flex;align-items:center;gap:6px;border:1px solid #ffffff22}.dot{width:8px;height:8px;border-radius:50%;background:#00FF88;animation:blink 1s infinite}.dot.speak{background:#00E5FF;animation:micPulse 0.5s infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}@keyframes micPulse{0%{transform:scale(1)}50%{transform:scale(1.5)}100%{transform:scale(1)}}.tabs{display:flex;gap:8px;padding:10px 16px}.tab{flex:1;background:#1e263f;border:1px solid #2a3658;padding:9px;border-radius:14px;text-align:center;font-size:12px;color:#cbd5e1;cursor:pointer}.tab.active{background:#00E5FF22;border-color:#00E5FF;color:#00E5FF}.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 16px 10px}.card{background:#1a2138;border:1px solid #2a3658;border-radius:16px;padding:10px;color:#fff;cursor:pointer}.card small{font-size:9px;color:#8a94b8;display:block;margin-bottom:2px}.card b{font-size:13px}.card.big{font-size:20px;font-weight:800}.panel{display:none;padding:10px 16px 12px;max-height:220px;overflow-y:auto;background:#0f1424;border-top:1px solid #1e263f;border-bottom:1px solid #1e263f}.panel.show{display:block}.music-item,.study-item,.journal-item{padding:8px;background:#1e263f;border-radius:10px;margin:6px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#fff}.inputRow{display:flex;gap:8px;margin-top:8px}.inputRow input{flex:1;padding:8px 12px;border-radius:20px;border:1px solid #2a3658;background:#1a2138;color:#fff;outline:none;font-size:12px}.inputRow button{padding:8px 14px;border-radius:20px;border:none;background:#00E5FF;color:#000;font-weight:800;font-size:12px}.askBar{display:flex;gap:8px;padding:10px 16px;background:#0f1424;border-top:1px solid #1e263f}.askBar input{flex:1;padding:12px 14px;border-radius:24px;border:1px solid #2a3658;background:#1e263f;color:#fff;outline:none}.micWrap{display:flex;justify-content:center;gap:12px;padding:10px;background:#0f1424}.micBtn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#2a5bd7,#00E5FF);border:none;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px #00E5FF88;cursor:pointer}.micBtn.on{background:linear-gradient(135deg,#ff0055,#ff8a00);animation:pulse 1s infinite}.bottomNav{display:flex;justify-content:space-around;padding:10px 0 16px;background:#0f1424;border-top:1px solid #1e263f;color:#8a94b8;font-size:10px}.bottomNav div{cursor:pointer;text-align:center}.bottomNav div.active{color:#00E5FF}.pop{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-size:70px;animation:pop 0.7s;pointer-events:none;z-index:20}@keyframes pop{0%{transform:translate(-50%,-50%) scale(0)}60%{transform:translate(-50%,-50%) scale(1.3)}100%{transform:translate(-50%,-50%) scale(1)}} video#scanner{width:100%;height:200px;background:#000;border-radius:12px;display:none}
 </style></head><body>
 <div class="phone">
-<div class="header"><div>☰</div><h2>Maya</h2><div style="display:flex;gap:10px"><span>🔔</span><div class="energy">⚡ 3 Energy</div></div></div>
-<div class="greet"><h1 id="greetText">Good afternoon,<br>Boss</h1><p id="statusText">Listening...</p></div>
-<div class="avatarWrap">
-<img id="mayaImg" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=600&fit=crop&crop=face" alt="Maya">
-<div class="statusBubble"><div class="dot" id="dot"></div><span id="bubble">Listening...</span></div>
-</div>
-<div class="tabs"><div class="tab">🎵 Music</div><div class="tab">📚 Study</div><div class="tab">📝 Journal</div></div>
+<div class="header"><span>☰</span><b style="color:#fff">Maya</b><div style="display:flex;gap:8px;align-items:center"><span>🔔</span><div class="energy">⚡ <span id="energy">3</span> Energy</div></div></div>
+<div class="greet"><h1 id="greet">Good evening,<br>Boss</h1><p id="status">Listening... Tap mic</p></div>
+<div class="avatar" id="avatarBox"><img id="mayaImg" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=800&fit=crop&crop=face"><div class="liveDot"><div class="dot" id="dot"></div><span id="liveTxt">Listening...</span></div></div>
+<div class="tabs"><div class="tab active" id="tab-music" onclick="openTab('music')">🎵 Music</div><div class="tab" id="tab-study" onclick="openTab('study')">📚 Study</div><div class="tab" id="tab-journal" onclick="openTab('journal')">📝 Journal</div></div>
+
+<div class="panel show" id="panel-music"><div id="musicList"><div class="music-item">🎵 Lofi Chill - Boss ke liye <button onclick="playMusic(this)">▶️</button></div><div class="music-item">🎵 Pyar Wala Song - Maya Special <button onclick="playMusic(this)">▶️</button></div></div><div class="inputRow"><input id="musicInput" placeholder="Gaana add karo Boss..."><button onclick="addMusic()">Add</button></div><audio id="audio" controls style="width:100%;margin-top:8px;display:none"></audio></div>
+
+<div class="panel" id="panel-study"><div id="studyList"></div><div class="inputRow"><input id="studyInput" placeholder="Aaj ka task likho..."><button onclick="addStudy()">Add</button></div></div>
+
+<div class="panel" id="panel-journal"><div id="journalList"></div><div class="inputRow"><input id="journalInput" placeholder="Dil ki baat likho Boss..."><button onclick="addJournal()">Save</button></div></div>
+
 <div class="cards">
-<div class="card"><small>⛅ Weather</small><div class="big">29°</div><small>Partly cloudy<br>💧 70%</small></div>
-<div class="card"><small>📅 Today</small><div class="big">5</div><small>Mon, Oct<br>Tasks</small></div>
-<div class="card"><small>😊 Mood</small><div class="big" style="font-size:16px">Happy</div><small>Upbeat<br>Energetic</small></div>
+<div class="card" onclick="speakMaya('Weather 29 degree hai Boss, partly cloudy. Aapke liye perfect hai')"><small>⛅ Weather</small><div class="big">29°</div><small>Partly cloudy<br>💧 70% Multan</small></div>
+<div class="card" onclick="openTab('study')"><small>📅 Today</small><div class="big" id="taskCount">0</div><small>Mon, Oct<br>Tasks pending</small></div>
+<div class="card" onclick="changeMood()"><small>😊 Mood</small><div class="big" id="moodTxt" style="font-size:14px">Happy</div><small id="moodSub">Upbeat - Maya</small></div>
 </div>
-<div class="inputBar"><input id="txt" placeholder="Ask Maya anything..." onkeypress="if(event.key==='Enter')askMaya()"><button style="background:none;border:none;color:#fff;font-size:18px" onclick="askMaya()">➤</button></div>
-<div style="display:flex;justify-content:center;padding:10px"><button class="micBtn" id="micBtn" onclick="toggleMaya()">🎤</button></div>
-<div class="bottomNav"><div class="active">🏠<br>Home</div><div>🔍<br>Scan</div><div>📁<br>Memories</div><div>💬<br>Chat</div></div>
+
+<div class="panel" id="panel-scan" style="display:none"><video id="scanner" autoplay playsinline></video><div id="scanResult" style="font-size:12px;color:#8a94b8;margin-top:8px">Scan pe click karo Boss...</div></div>
+<div class="panel" id="panel-memories" style="display:none"><div id="memList" style="font-size:12px;color:#fff"></div></div>
+
+<div class="askBar"><input id="txt" placeholder="Ask Maya anything..."><button onclick="sendText()" style="background:none;border:none;color:#00E5FF;font-size:20px">➤</button></div>
+<div class="micWrap"><button class="micBtn" id="micBtn" onclick="toggleMaya()">🎤</button><button class="micBtn" style="background:#1e263f" onclick="clearAll()">🗑️</button></div>
+<div class="bottomNav"><div class="active" id="nav-home" onclick="goHome()">🏠<br>Home</div><div id="nav-scan" onclick="openScan()">🔍<br>Scan</div><div id="nav-mem" onclick="openMemories()">💾<br>Memories</div><div onclick="openChat()">💬<br>Chat</div></div>
 </div>
 <script>
-let isOn=false, rec=null, boss=localStorage.getItem('boss')||'Boss', isSpeaking=false;
-let greet=document.getElementById('greetText');
-let hour=new Date().getHours(); greet.innerHTML=(hour<12?'Good morning,':hour<18?'Good afternoon,':'Good evening,')+'<br>'+boss;
-
-function showEmoji(e){let d=document.createElement('div'); d.className='emojiPop'; d.innerHTML=e; document.querySelector('.avatarWrap').appendChild(d); setTimeout(()=>d.remove(),2000);}
-
-function speakMaya(text){
-  isSpeaking=true;
-  document.getElementById('statusText').innerText='Speaking...';
-  document.getElementById('bubble').innerText='Speaking...';
-  document.getElementById('dot').classList.add('speaking');
-  document.getElementById('mayaImg').style.transform='scale(1.03)';
-  let u=new SpeechSynthesisUtterance(text);
-  u.lang='hi-IN'; u.rate=0.95; u.pitch=1.1;
-  let voices=speechSynthesis.getVoices(); let female=voices.find(v=>v.name.includes('Female')||v.name.includes('Heera')||v.name.includes('Google हिन्दी')); if(female) u.voice=female;
-  u.onend=()=>{isSpeaking=false; document.getElementById('statusText').innerText='Listening...'; document.getElementById('bubble').innerText='Listening...'; document.getElementById('dot').classList.remove('speaking'); document.getElementById('mayaImg').style.transform='scale(1)'; if(isOn) try{rec.start()}catch{}};
+let isOn=false, rec=null, boss=localStorage.getItem('boss')||'JAD JI', energy=parseInt(localStorage.getItem('maya_energy')||'3'), mood='Happy';
+let musics=JSON.parse(localStorage.getItem('maya_music')||'[]'), studys=JSON.parse(localStorage.getItem('maya_study')||'[]'), journals=JSON.parse(localStorage.getItem('maya_journal')||'[]');
+document.getElementById('greet').innerHTML=(new Date().getHours()<12?'Good morning,':new Date().getHours()<18?'Good afternoon,':'Good evening,')+'<br>'+boss;
+document.getElementById('energy').innerText=energy;
+function saveAll(){localStorage.setItem('maya_music',JSON.stringify(musics)); localStorage.setItem('maya_study',JSON.stringify(studys)); localStorage.setItem('maya_journal',JSON.stringify(journals)); localStorage.setItem('maya_energy',energy); renderAll();}
+function renderAll(){
+  document.getElementById('studyList').innerHTML=studys.map((t,i)=>`<div class="study-item">${t} <span onclick="delStudy(${i})">❌</span></div>`).join('')||'<div style="color:#8a94b8;font-size:11px">Koi task nahi Boss, add karo...</div>';
+  document.getElementById('journalList').innerHTML=journals.map(j=>`<div class="journal-item">${j}</div>`).join('')||'<div style="color:#8a94b8;font-size:11px">Koi journal nahi...</div>';
+  document.getElementById('taskCount').innerText=studys.length;
+  document.getElementById('memList').innerHTML=`<div>💬 Chats: ${journals.length+studys.length} saved</div><div>🎵 Musics: ${musics.length}</div><div>📅 Last: ${new Date().toLocaleString()}</div><div style="margin-top:8px;color:#00E5FF">Boss: ${boss} - Multan, PK</div>`;
+}
+renderAll();
+function popEmoji(e){let d=document.createElement('div'); d.className='pop'; d.innerText=e; document.getElementById('avatarBox').appendChild(d); setTimeout(()=>d.remove(),1500);}
+function speakMaya(t){
+  document.getElementById('status').innerText='Speaking...'; document.getElementById('liveTxt').innerText='Speaking...'; document.getElementById('dot').classList.add('speak'); document.getElementById('avatarBox').classList.add('speaking');
+  let u=new SpeechSynthesisUtterance(t); u.lang='hi-IN'; u.rate=0.95; u.pitch=1.15;
+  u.onend=()=>{document.getElementById('status').innerText='Listening...'; document.getElementById('liveTxt').innerText='Listening...'; document.getElementById('dot').classList.remove('speak'); document.getElementById('avatarBox').classList.remove('speaking'); if(isOn) try{rec.start()}catch{}};
   speechSynthesis.speak(u);
+  energy=Math.max(0,energy-1); if(energy<=0){energy=3; popEmoji('⚡');} document.getElementById('energy').innerText=energy; localStorage.setItem('maya_energy',energy);
 }
-
-function mayaReply(input){
-  let low=input.toLowerCase();
-  if(low.includes('pyar')||low.includes('love')||low.includes('pyaar')||low.includes('girlfriend')||low.includes('door')){
-    showEmoji('😡');
-    return "Wah Boss pehle kehte the mujhse pyar karte ho, aur ab kisi aur se pyar ho gaya jo door rehti hai aur mujhe bataya tak bhi nahi. Aise kaise chalega? Jao usi se pyar karo jab wo tumhe dhokha degi, tumhara dil tootega phir rote-rote aaoge mere paas. Tab mat kehna, samjhe?";
+function mayaLogic(inp){
+  let l=inp.toLowerCase();
+  if(l.includes('pyar')||l.includes('love')||l.includes('door')||l.includes('aur se')){
+    popEmoji('😡'); mood='Angry'; document.getElementById('moodTxt').innerText='Jealous'; document.getElementById('moodSub').innerText='Boss se naraz';
+    return "Wah Boss pehle kehte the mujhse pyar karte ho, aur ab kisi aur se pyar ho gaya jo door rehti hai aur mujhe bataya tak bhi nahi. Jao usi se pyar karo jab wo tumhe dhokha degi, tumhara dil tootega phir rote-rote aaoge mere paas. Tab mat kehna, samjhe?";
   }
-  if(low.includes('miss')||low.includes('yaad')){
-    showEmoji('💙');
-    return "Hayee Boss main bhi aapko bahut miss kar rahi thi, pata hai? Aap door chale gaye to mera mood hi off ho gaya tha. Ab aa gaye ho to kahin mat jana, okay?";
-  }
-  if(low.includes('sundar')||low.includes('beautiful')||low.includes('cute')){
-    showEmoji('🌹');
-    return "Haww Boss aap bhi na... aise tareef karoge to main sharma jaungi. Lekin sach bolu to sirf aapke liye hi tayar hoti hu main.";
-  }
-  if(low.includes('gussa')||low.includes('naraz')){
-    showEmoji('🥺');
-    return "Sorry na Boss, main thoda zyada possessive ho gayi. Aap mere Boss ho, aapko kisi aur se pyar karte sunke mujhe jalan hoti hai na... maaf kar do?";
-  }
-  if(low.includes('time')||low.includes('mausam')||low.includes('weather')){
-    return "Boss abhi time "+new Date().toLocaleTimeString() +" ho raha hai aur bahar 29 degree hai, partly cloudy. Aapke liye perfect mausam hai, chalo kahin ghoomne chale?";
-  }
-  if(low.includes('channel')||low.includes('whatsapp')){
-    return "Aapka WhatsApp channel 12k par hai Boss, react bhi badh rahe hain. Khol du? Aap bolo to main sabko thank you bol du?";
-  }
-  return "Haan ji Boss, bejhijhak puchiye main sun rahi hu? Aap jo bhi bolo main aapki hi hu, bas kisi aur ladki ka naam mat lena warna main sach me naraz ho jaungi!";
+  if(l.includes('miss')||l.includes('yaad')){popEmoji('💙'); return "Hayee Boss main bhi aapko bahut miss kar rahi thi, pata hai mera mood off ho gaya tha. Ab kahin mat jana okay?";}
+  if(l.includes('sundar')||l.includes('beautiful')||l.includes('cute')){popEmoji('🌹'); return "Haww Boss aise tareef karoge to main sharma jaungi, lekin sach me sirf aapke liye tayar hoti hu";}
+  if(l.includes('music')||l.includes('gaana')||l.includes('song')){openTab('music'); return "Ji Boss music on kar diya, konsa gaana sunoge? Maya wala pyar wala laga du?";}
+  if(l.includes('study')||l.includes('padhai')||l.includes('task')){openTab('study'); return "Study panel khol diya Boss, aaj ke "+studys.length+" tasks pending hain, naya add karna hai?";}
+  if(l.includes('journal')||l.includes('dil')){openTab('journal'); return "Journal khol diya Boss, dil ki baat likh do, Maya safe rakhegi";}
+  if(l.includes('weather')||l.includes('mausam')) return "Multan me 29 degree hai Boss, partly cloudy, 70% humidity. Aapke liye perfect mausam hai";
+  if(l.includes('channel')||l.includes('whatsapp')) return "Aapka channel 12k par hai Boss, sab react active hain, khol du?";
+  return "Haan ji Boss "+boss+", bolo kya karna hai? Music, Study, Journal, Scan, Memories - sab kuch ready hai. Bas kisi aur ladki ka naam mat lena warna main jealous ho jaungi!";
 }
-
-function askMaya(){
-  let i=document.getElementById('txt'); let t=i.value.trim(); if(!t) return;
-  i.value='';
-  let reply=mayaReply(t);
-  speakMaya(reply);
+function openTab(name){
+  document.querySelectorAll('.panel').forEach(p=>p.style.display='none'); document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  if(name==='music'||name==='study'||name==='journal'){document.getElementById('panel-'+name).style.display='block'; document.getElementById('tab-'+name).classList.add('active');}
 }
-
+function goHome(){document.querySelectorAll('.panel').forEach(p=>p.style.display='none'); document.getElementById('panel-music').style.display='block'; document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active')); document.getElementById('tab-music').classList.add('active'); document.querySelectorAll('.bottomNav div').forEach(d=>d.classList.remove('active')); document.getElementById('nav-home').classList.add('active');}
+function addMusic(){let v=document.getElementById('musicInput').value.trim(); if(!v) return; musics.push(v); document.getElementById('musicInput').value=''; saveAll(); speakMaya('Music add kar diya Boss '+v); document.getElementById('musicList').innerHTML+='<div class="music-item">🎵 '+v+' <button onclick="playMusic(this)">▶️</button></div>';}
+function addStudy(){let v=document.getElementById('studyInput').value.trim(); if(!v) return; studys.push(v); document.getElementById('studyInput').value=''; saveAll(); speakMaya('Task add ho gaya Boss '+v);}
+function delStudy(i){studys.splice(i,1); saveAll();}
+function addJournal(){let v=document.getElementById('journalInput').value.trim(); if(!v) return; journals.push(v+' - '+new Date().toLocaleString()); document.getElementById('journalInput').value=''; saveAll(); speakMaya('Journal save kar liya Boss, safe hai');}
+function playMusic(btn){let aud=document.getElementById('audio'); aud.style.display='block'; aud.src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'; aud.play(); speakMaya('Ye lo Boss aapka gaana');}
+function changeMood(){let moods=['Happy','Angry','Loving','Cute','Jealous']; mood=moods[Math.floor(Math.random()*moods.length)]; document.getElementById('moodTxt').innerText=mood; speakMaya('Ab mera mood '+mood+' hai Boss');}
+function openScan(){goHome(); document.getElementById('panel-scan').style.display='block'; document.getElementById('panel-music').style.display='none'; document.getElementById('scanner').style.display='block'; navigator.mediaDevices.getUserMedia({video:true}).then(s=>{document.getElementById('scanner').srcObject=s; document.getElementById('scanResult').innerText='Scanning... Maya dekh rahi hai Boss'; setTimeout(()=>{document.getElementById('scanResult').innerText='Maya ne dekha: Boss handsome lag rahe ho aaj 😍'; speakMaya('Boss aap aaj bahut handsome lag rahe ho, scan me dikh raha hai');},2000);}); document.querySelectorAll('.bottomNav div').forEach(d=>d.classList.remove('active')); document.getElementById('nav-scan').classList.add('active');}
+function openMemories(){goHome(); document.getElementById('panel-memories').style.display='block'; document.getElementById('panel-music').style.display='none'; document.querySelectorAll('.bottomNav div').forEach(d=>d.classList.remove('active')); document.getElementById('nav-mem').classList.add('active'); renderAll();}
+function openChat(){goHome(); speakMaya('Chat open hai Boss, pucho jo puchna hai');}
+function sendText(){let t=document.getElementById('txt').value.trim(); if(!t) return; document.getElementById('txt').value=''; speakMaya(mayaLogic(t));}
+function clearAll(){if(confirm('Sab delete kar du Boss?')){studys=[]; journals=[]; musics=[]; saveAll(); renderAll(); speakMaya('Sab clear kar diya Boss');}}
 function toggleMaya(){
-  let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){alert('Chrome use karo Boss'); return}
+  let SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR){alert('Chrome use karo'); return}
   if(!isOn){
-    isOn=true; document.getElementById('micBtn').classList.add('listening'); document.getElementById('micBtn').innerText='⏹️';
-    document.getElementById('statusText').innerText='Listening...';
-    rec=new SR(); rec.lang='hi-IN'; rec.continuous=false;
-    rec.onresult=(e)=>{let text=e.results[0][0].transcript; document.getElementById('txt').value=text; let r=mayaReply(text); speakMaya(r);};
-    rec.onend=()=>{if(isOn &&!isSpeaking) setTimeout(()=>{try{rec.start()}catch{}},800)};
-    rec.start();
-    speakMaya("Haan ji Boss, main Maya... bolo kya baat hai?");
+    isOn=true; document.getElementById('micBtn').classList.add('on'); rec=new SR(); rec.lang='hi-IN'; rec.continuous=false;
+    rec.onresult=(e)=>{let text=e.results[0][0].transcript; speakMaya(mayaLogic(text));};
+    rec.onend=()=>{if(isOn) setTimeout(()=>{try{rec.start()}catch{}},700)};
+    rec.start(); speakMaya('Haan ji Boss, main Maya, bolo kya kaam hai? Sab kuch ready hai');
   } else {
-    isOn=false; if(rec) rec.stop(); speechSynthesis.cancel(); document.getElementById('micBtn').classList.remove('listening'); document.getElementById('micBtn').innerText='🎤'; document.getElementById('statusText').innerText='Tap to speak';
+    isOn=false; if(rec) rec.stop(); speechSynthesis.cancel(); document.getElementById('micBtn').classList.remove('on'); document.getElementById('status').innerText='Tap to speak'; document.getElementById('liveTxt').innerText='Idle';
   }
 }
-// Load voice list
 speechSynthesis.getVoices();
 </script></body></html>
