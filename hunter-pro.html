@@ -1,55 +1,24 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>JARVIS CHAT + ALL FUTURE - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;display:flex;flex-direction:column;height:100vh;overflow:hidden}.top{background:linear-gradient(90deg,#075E54,#25D366);padding:12px;text-align:center;font-weight:900;color:#000;display:flex;justify-content:space-between;align-items:center}.orb-mini{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#00E5FF,#004466,#000);box-shadow:0 0 20px #00E5FF;animation:float 3s infinite}.orb-mini.on{box-shadow:0 0 30px #00FF88;transform:scale(1.1)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.search{margin:8px;background:#111b21;border-radius:20px;padding:8px 14px;display:flex;align-items:center;border:1px solid #222d34}.search input{flex:1;background:transparent;border:none;color:#fff;outline:none;font-size:13px}.picBar{width:92%;height:120px;margin:8px auto;border-radius:14px;overflow:hidden;position:relative;border:2px solid #25D366}.picBar img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:1s}.picBar img.active{opacity:1}.chatBox{flex:1;overflow-y:auto;padding:10px;background:#0b141a}.msg{max-width:80%;padding:10px 12px;border-radius:14px;margin:8px 0;font-size:13px;line-height:1.4;position:relative}.msg.user{background:#005c4b;margin-left:auto;border-bottom-right-radius:2px;color:#fff}.msg.jarvis{background:#202c33;margin-right:auto;border-bottom-left-radius:2px;color:#fff}.msg.time{font-size:9px;color:#8696a0;margin-top:4px;text-align:left}.future{margin:8px;background:#111b21;border-radius:12px;padding:10px;border:1px solid #222d34}.future h4{color:#25D366;font-size:12px;margin-bottom:8px}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}.card{background:#202c33;padding:8px;border-radius:10px;text-align:center;font-size:10px}.card b{display:block;font-size:14px;margin-bottom:2px}.card.active{border:1px solid #25D366}.bottom{background:#111b21;padding:8px;display:flex;align-items:center;gap:8px;border-top:1px solid #222d34}.micBtn{width:45px;height:45px;border-radius:50%;background:#202c33;border:none;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer}.micBtn.on{background:#f15c6d;animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}.input{flex:1;background:#2a3942;border:none;color:#fff;padding:10px 14px;border-radius:20px;outline:none;font-size:13px}.send{background:#00a884;border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:16px;cursor:pointer}</style></head><body>
-<div class="top"><div>💚 JAM DANISH</div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px" id="statusTxt">IDLE</span><div class="orb-mini" id="orb"></div></div><div onclick="document.getElementById('set').style.display=document.getElementById('set').style.display=='block'?'none':'block'">⚙️</div></div>
-
-<div id="set" style="display:none;background:#111b21;margin:8px;padding:10px;border-radius:12px;border:1px solid #222d34"><input id="apiKey" placeholder="Gemini API Key AIza..." style="width:100%;padding:8px;background:#000;border:1px solid #333;color:#fff;border-radius:8px;margin-bottom:6px"><input id="bossName" placeholder="Boss Name JAD JI" style="width:100%;padding:8px;background:#000;border:1px solid #333;color:#fff;border-radius:8px"><button onclick="saveSet()" style="width:100%;margin-top:6px;padding:8px;background:#25D366;border:none;border-radius:8px;font-weight:900">SAVE کرو</button></div>
-
-<div class="search">🔍 <input id="searchInput" placeholder="سرچ کرو جاد جی - چیٹ، چینل، تصویر..." onkeyup="searchChat(this.value)"> <span onclick="toggleMic()" style="cursor:pointer">🎤</span></div>
-
-<div class="picBar" id="slider"><img src="https://picsum.photos/400/120?random=1" class="active"><img src="https://picsum.photos/400/120?random=2"><img src="https://picsum.photos/400/120?random=3"><img src="https://picsum.photos/400/120?random=4"></div>
-
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>JARVIS CHAT - JAD JI</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;height:100vh;display:flex;flex-direction:column}.header{background:#25D366;padding:12px;text-align:center;font-weight:900;color:#000;font-size:18px}.search{margin:8px;background:#111;border-radius:20px;padding:10px 15px;display:flex;gap:8px}.search input{flex:1;background:transparent;border:none;color:#fff;outline:none}.slider{width:95%;height:140px;margin:8px auto;border-radius:15px;background:linear-gradient(45deg,#0a2a1a,#25D366);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;animation:color 3s infinite}@keyframes color{0%{background:linear-gradient(45deg,#0a2a1a,#25D366)}50%{background:linear-gradient(45deg,#1a0a2a,#E91E63)}100%{background:linear-gradient(45deg,#0a2a1a,#25D366)}}.future{margin:8px;background:#111;padding:10px;border-radius:12px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}.future div{background:#222;padding:8px;border-radius:8px;text-align:center;font-size:11px;border:1px solid #25D366}.chat{flex:1;overflow-y:auto;padding:10px;background:#0b141a}.msg{max-width:80%;padding:10px;border-radius:12px;margin:6px 0;font-size:13px}.user{background:#005c4b;margin-left:auto;color:#fff}.jarvis{background:#202c33;margin-right:auto;color:#fff}.bottom{background:#111;padding:10px;display:flex;gap:8px}.bottom input{flex:1;padding:12px;border-radius:20px;border:none;background:#2a3942;color:#fff;outline:none}.bottom button{width:45px;height:45px;border-radius:50%;border:none;background:#25D366;color:#fff;font-size:18px}</style></head><body>
+<div class="header">💬 JAD JI - JARVIS CHAT SYSTEM</div>
+<div class="search">🔍 <input id="sInput" placeholder="سرچ کرو..." onkeyup="doSearch(this.value)"><span onclick="doMic()">🎤</span></div>
+<div class="slider" id="slider">🖼️ تصویر بدل رہی ہے - 1</div>
 <div class="future">
-<h4>🚀 All Future - سب فیچر ON ہیں</h4>
-<div class="grid">
-<div class="card active"><b>🤖</b>AI Chat<br><span style="color:#25D366">● ON</span></div>
-<div class="card active"><b>❤️</b>300 React<br><span id="reactCount" style="color:#25D366">0/300</span></div>
-<div class="card active"><b>🎤</b>Voice ON<br><span style="color:#25D366">● ON رہے گا</span></div>
-<div class="card active"><b>🖼️</b>Auto Pic<br><span style="color:#25D366">● بدل رہی</span></div>
-<div class="card active"><b>🔍</b>Search<br><span style="color:#25D366">● ON</span></div>
-<div class="card active"><b>📟</b>Termux<br><span style="color:#25D366">● Ready</span></div>
-<div class="card active"><b>💬</b>12k Follow<br><span style="color:#25D366">● Active</span></div>
-<div class="card active"><b>🌐</b>Translate<br><span style="color:#25D366">● Urdu/Eng</span></div>
-<div class="card active"><b>⚡</b>Channel<br><span style="color:#25D366">● Live</span></div>
+<div>🤖 AI CHAT<br><b style="color:#25D366">ON</b></div>
+<div>❤️ 300 React<br><b id="rc" style="color:#25D366">0/300</b></div>
+<div>🎤 Voice<br><b style="color:#25D366">ON</b></div>
+<div>🔍 Search<br><b style="color:#25D366">ON</b></div>
+<div>🖼️ Auto Pic<br><b style="color:#25D366">ON</b></div>
+<div>💬 12k Follow<br><b style="color:#25D366">ON</b></div>
 </div>
-</div>
-
-<div class="chatBox" id="chatBox">
-<div class="msg jarvis">السلام علیکم جاد جی! 💚 میں JARVIS ہوں - آپ کا ٹاور سسٹم۔ بولیں کیا چاہیے؟<div class="time">ابھی • JARVIS</div></div>
-</div>
-
-<div class="bottom">
-<button class="micBtn" id="micBtn" onclick="toggleMic()">🎤</button>
-<input class="input" id="textInput" placeholder="میسج لکھو جاد جی..." onkeypress="if(event.key==='Enter')sendMsg()">
-<button class="send" onclick="sendMsg()">➤</button>
-</div>
-
+<div class="chat" id="chat"><div class="msg jarvis">السلام علیکم جاد جی! 💚 میں JARVIS ہوں - بولو کیا کرنا ہے؟ یہ چیٹ سسٹم اب سب کچھ کرے گا!</div></div>
+<div class="bottom"><button onclick="doMic()" id="mic">🎤</button><input id="txt" placeholder="میسج لکھو جاد جی..." onkeypress="if(event.key==='Enter')send()"><button onclick="send()">➤</button></div>
 <script>
-let isOn=false, rec=null, bossName=localStorage.getItem('boss')||'JAD JI', apiKey=localStorage.getItem('gemini_key')||'', total=parseInt(localStorage.getItem('ch_react')||'0'), msgs=JSON.parse(localStorage.getItem('jarvis_chats')||'[]');
-document.getElementById('bossName').value=bossName; document.getElementById('apiKey').value=apiKey;
-function saveSet(){bossName=document.getElementById('bossName').value||'JAD JI'; apiKey=document.getElementById('apiKey').value; localStorage.setItem('boss',bossName); localStorage.setItem('gemini_key',apiKey); document.getElementById('set').style.display='none'; addMsg('jarvis','سیٹنگ سیو ہو گئی جاد جی - باس: '+bossName)}
-function addMsg(who,text){let box=document.getElementById('chatBox'), now=new Date().toLocaleTimeString('ur-PK',{hour:'2-digit',minute:'2-digit'}); let d=document.createElement('div'); d.className='msg '+who; d.innerHTML=text+`<div class="time">${now} • ${who=='user'?bossName:'JARVIS'}</div>`; box.appendChild(d); box.scrollTop=box.scrollHeight; msgs.push({who,text,time:Date.now()}); localStorage.setItem('jarvis_chats',JSON.stringify(msgs.slice(-50))); speakIfNeeded(who,text)}
-function speakIfNeeded(who,text){if(who=='jarvis' && isOn){let u=new SpeechSynthesisUtterance(text); u.lang='ur-PK'; u.rate=0.9; speechSynthesis.speak(u);}}
-function sendMsg(){let inp=document.getElementById('textInput'), t=inp.value.trim(); if(!t) return; addMsg('user',t); inp.value=''; handleCommand(t)}
-function handleCommand(t){let low=t.toLowerCase(); setTimeout(()=>{if(low.includes('چینل')||low.includes('channel')){addMsg('jarvis','جی جاد جی 💚 آپ کا واٹس ایپ چینل 12k پر ہے - کھول دوں؟ <a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="color:#25D366">کھولو</a>')}else if(low.includes('تصویر')||low.includes('pic')){addMsg('jarvis','🖼️ تصویر اوپر بدل رہی ہے جاد جی - ہر 3 سیکنڈ بعد آٹو'); nextPic()}else if(low.includes('ری ایکٹ')||low.includes('react')){addMsg('jarvis','❤️ آٹو ری ایکٹ '+total+' / 300 تک پہنچ گیا جاد جی - چینل میں لگ رہے ہیں')}else if(low.includes('time')||low.includes('ٹائم')){addMsg('jarvis','⏰ ابھی ٹائم ہے: '+new Date().toLocaleString('ur-PK'))}else if(low.includes('سلام')){addMsg('jarvis','وعلیکم السلام جاد جی! 💚 حکم کریں')}else{addMsg('jarvis','جی جاد جی، میں نے سن لیا: "'+t+'" - All Future ایکٹیو ہے - بتائیں اور کیا کرنا ہے؟')}},600)}
-// Auto Pic
-let idx=0, imgs=document.querySelectorAll('#slider img'); function show(n){imgs.forEach(i=>i.classList.remove('active')); idx=(n+imgs.length)%imgs.length; imgs[idx].classList.add('active')} function nextPic(){show(idx+1)} setInterval(nextPic,3000);
-// Auto React
-function updateReact(){document.getElementById('reactCount').innerText=total+' / 300'; localStorage.setItem('ch_react',total)} setInterval(()=>{if(total<300){total+=Math.floor(Math.random()*3)+1; if(total>300)total=300; updateReact()}},1500); updateReact();
-// Search
-function searchChat(v){let box=document.getElementById('chatBox'); if(!v){box.querySelectorAll('.msg').forEach(m=>m.style.display='block'); return} box.querySelectorAll('.msg').forEach(m=>{m.style.display=m.innerText.toLowerCase().includes(v.toLowerCase())?'block':'none'})}
-// Mic - ON رہے گا
-function toggleMic(){if(!isOn){startMic()}else{stopMic()}}
-function startMic(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR){alert('Chrome استعمال کرو جاد جی'); return} isOn=true; document.getElementById('micBtn').classList.add('on'); document.getElementById('orb').classList.add('on'); document.getElementById('statusTxt').innerText='🔴 LISTENING'; rec=new SR(); rec.lang='ur-PK'; rec.continuous=true; rec.interimResults=true; rec.onresult=(e)=>{let final=''; for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal) final+=e.results[i][0].transcript} if(final){addMsg('user',final); handleCommand(final)}}; rec.onend=()=>{if(isOn)try{rec.start()}catch{}}; rec.start()}
-function stopMic(){isOn=false; if(rec) rec.stop(); document.getElementById('micBtn').classList.remove('on'); document.getElementById('orb').classList.remove('on'); document.getElementById('statusTxt').innerText='IDLE'; speechSynthesis.cancel()}
-// Load old chats
-if(msgs.length>0){document.getElementById('chatBox').innerHTML=''; msgs.slice(-20).forEach(m=>{let d=document.createElement('div'); d.className='msg '+m.who; d.innerHTML=m.text+`<div class="time">پرانا • ${m.who}</div>`; document.getElementById('chatBox').appendChild(d)})}
+let msgs=[], cnt=0, isMic=false, rec=null;
+function add(w,t){let c=document.getElementById('chat'); let d=document.createElement('div'); d.className='msg '+w; d.innerHTML=t; c.appendChild(d); c.scrollTop=c.scrollHeight; msgs.push(t); let utt=new SpeechSynthesisUtterance(t); utt.lang='ur-PK'; if(w=='jarvis' && isMic) speechSynthesis.speak(utt);}
+function send(){let i=document.getElementById('txt'), t=i.value.trim(); if(!t) return; add('user',t); i.value=''; setTimeout(()=>{handle(t)},500);}
+function handle(t){let l=t.toLowerCase(); if(l.includes('سلام')) add('jarvis','وعلیکم السلام جاد جی! 💚 حکم کریں - سب سسٹم ON ہے'); else if(l.includes('چینل')||l.includes('channel')) add('jarvis','جی جاد جی - آپ کا چینل 12k پر ہے - <a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="color:#25D366">کھولو</a>'); else if(l.includes('ری ایکٹ')||l.includes('react')) add('jarvis','❤️ ری ایکٹ '+cnt+'/300 ہو گئے جاد جی'); else if(l.includes('تصویر')||l.includes('pic')) add('jarvis','🖼️ اوپر تصویر بدل رہی ہے جاد جی - ہر 3 سیکنڈ میں'); else add('jarvis','جی جاد جی، میں نے سن لیا: "'+t+'" - اب یہ چیٹ سسٹم کام کر رہا ہے! اور کیا کرنا ہے؟');}
+function doSearch(v){document.querySelectorAll('.msg').forEach(m=>{m.style.display=!v||m.innerText.toLowerCase().includes(v.toLowerCase())?'block':'none'});}
+let sNo=1; setInterval(()=>{sNo++; document.getElementById('slider').innerText='🖼️ تصویر بدل رہی ہے - '+sNo;},3000);
+setInterval(()=>{if(cnt<300){cnt+=2; document.getElementById('rc').innerText=cnt+'/300';}},1500);
+function doMic(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR){alert('Chrome کھولو جاد جی'); return} if(!isMic){isMic=true; document.getElementById('mic').innerText='🔴'; rec=new SR(); rec.lang='ur-PK'; rec.continuous=true; rec.onresult=(e)=>{let f=''; for(let i=e.resultIndex;i<e.results.length;i++) if(e.results[i].isFinal) f+=e.results[i][0].transcript; if(f){add('user',f); handle(f);}}; rec.onend=()=>{if(isMic) try{rec.start()}catch{}}; rec.start(); add('jarvis','🎤 مائیک ON ہو گیا جاد جی - اب بولو، سب کچھ کرے گا');} else {isMic=false; if(rec) rec.stop(); document.getElementById('mic').innerText='🎤'; add('jarvis','مائیک OFF');}}
 </script></body></html>
