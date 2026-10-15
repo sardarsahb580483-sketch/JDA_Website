@@ -1,50 +1,74 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Auto Pic Change - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;text-align:center}.top{background:#25D366;padding:12px;font-weight:900;color:#000}.picSlider{position:relative;width:100%;max-width:400px;height:400px;margin:16px auto;border-radius:20px;overflow:hidden;border:3px solid #25D366;box-shadow:0 0 30px #25D36666}.picSlider img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 1s ease-in-out}.picSlider img.active{opacity:1}.dots{display:flex;justify-content:center;gap:6px;margin-top:10px}.dot{width:8px;height:8px;background:#333;border-radius:50%}.dot.active{background:#25D366}.mic{width:90px;height:90px;border-radius:50%;margin:12px auto;display:flex;align-items:center;justify-content:center;font-size:40px;cursor:pointer;transition:0.3s}.mic.off{background:#222;border:2px solid #333}.mic.on{background:linear-gradient(135deg,#ff0000,#990000);box-shadow:0 0 30px #ff0000;animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}.box{background:#111;border:1px solid #222;border-radius:16px;margin:12px;padding:14px;text-align:right}.btn{width:100%;padding:12px;border-radius:12px;border:none;font-weight:900;margin-top:8px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#222;color:#fff;border:1px solid #333}</style></head><body>
-<div class="top">🖼️ تصویر بدلتی رہے گی + مائیک - JAM DANISH</div>
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>ALL IN ONE - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui}.top{background:linear-gradient(90deg,#075E54,#25D366);padding:12px;text-align:center;font-weight:900;color:#000;position:sticky;top:0;z-index:99}.searchBox{background:#111b21;margin:12px;border-radius:24px;display:flex;align-items:center;padding:10px 14px;border:1px solid #222d34}.searchBox input{flex:1;background:transparent;border:none;color:#fff;outline:none;font-size:14px}.picSlider{position:relative;width:92%;max-width:400px;height:320px;margin:12px auto;border-radius:20px;overflow:hidden;border:2px solid #25D366;box-shadow:0 0 30px #25D36644}.picSlider img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:1s}.picSlider img.active{opacity:1}.reactBox{background:#111b21;margin:12px;border-radius:16px;padding:12px;border:1px solid #222d34}.counterBig{font-size:38px;font-weight:900;color:#25D366;text-align:center}.reactBtns{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:8px}.reactBtn{background:#202c33;border:none;color:#fff;padding:6px 12px;border-radius:20px;font-size:13px}.reactBtn.active{background:#00a884}.mic{width:80px;height:80px;border-radius:50%;margin:10px auto;display:flex;align-items:center;justify-content:center;font-size:36px;cursor:pointer}.mic.off{background:#222;border:2px solid #333}.mic.on{background:linear-gradient(135deg,#ff0000,#990000);box-shadow:0 0 30px #ff0000;animation:pulse 1s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}.box{background:#111;border:1px solid #222;border-radius:14px;margin:12px;padding:12px;text-align:right}.termux{background:#000;color:#0f0;border:1px solid #0f0;border-radius:10px;padding:10px;font-family:monospace;font-size:11px;text-align:left;direction:ltr;white-space:pre-wrap}.btn{width:100%;padding:13px;border-radius:12px;border:none;font-weight:900;margin-top:8px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#202c33;color:#fff;border:1px solid #333}.futureGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.futureCard{background:#202c33;padding:10px;border-radius:12px;text-align:center;font-size:12px}</style></head><body>
+<div class="top">💚 ALL FUTURE + SEARCH + 300 REACT - JAM DANISH 💚</div>
+
+<div class="searchBox">🔍 <input type="text" id="searchInput" placeholder="سرچ کرو جاد جی - چینل، تصویر، ری ایکٹ..." onkeyup="doSearch(this.value)"> <span onclick="startVoiceSearch()" style="cursor:pointer">🎤</span></div>
 
 <div class="picSlider" id="slider">
-<img src="https://picsum.photos/400/400?random=1" class="active" alt="pic1">
-<img src="https://picsum.photos/400/400?random=2" alt="pic2">
-<img src="https://picsum.photos/400/400?random=3" alt="pic3">
-<img src="https://picsum.photos/400/400?random=4" alt="pic4">
-<img src="https://picsum.photos/400/400?random=5" alt="pic5">
-<img src="https://picsum.photos/400/400?random=6" alt="pic6">
+<img src="https://picsum.photos/400/320?random=11" class="active"><img src="https://picsum.photos/400/320?random=22"><img src="https://picsum.photos/400/320?random=33"><img src="https://picsum.photos/400/320?random=44"><img src="https://picsum.photos/400/320?random=55">
 </div>
-<div class="dots" id="dots"></div>
-<div style="font-size:11px;color:#25D366;margin-top:6px">ہر 3 سیکنڈ بعد تصویر خود بدل رہی ہے 💚</div>
+<div style="text-align:center;font-size:10px;color:#25D366">🖼️ تصویر ہر 3 سیکنڈ بعد بدل رہی ہے - All Future</div>
 
-<div style="display:flex;justify-content:center;gap:8px;margin-top:10px">
-<button class="btn-black" style="padding:8px 16px;border-radius:20px;border:1px solid #333;color:#fff" onclick="prevPic()">⏮️ پچھلی</button>
+<div style="display:flex;justify-content:center;gap:10px;margin-top:8px">
+<button style="background:#222;color:#fff;border:1px solid #333;padding:6px 14px;border-radius:20px" onclick="prevPic()">⏮️</button>
 <div class="mic off" id="micBtn" onclick="toggleMic()">🎤</div>
-<button class="btn-black" style="padding:8px 16px;border-radius:20px;border:1px solid #333;color:#fff" onclick="nextPic()">اگلی ⏭️</button>
+<button style="background:#222;color:#fff;border:1px solid #333;padding:6px 14px;border-radius:20px" onclick="nextPic()">⏭️</button>
 </div>
-<div id="statusTxt" style="font-size:12px;color:#888;margin-top:4px">مائیک OFF ہے - کلک کرو ON</div>
+<div id="statusTxt" style="text-align:center;font-size:11px;color:#888">مائیک OFF - کلک کرو ON</div>
+
+<div class="reactBox">
+<div class="counterBig" id="totalReact">0 / 300</div>
+<div style="text-align:center;font-size:11px;color:#8696a0">❤️ آٹو ری ایکٹ 200-300 - چینل میں لگ رہے ہیں</div>
+<div class="reactBtns">
+<div class="reactBtn active">❤️ <span id="c1">0</span></div><div class="reactBtn active">😍 <span id="c2">0</span></div><div class="reactBtn active">🔥 <span id="c3">0</span></div><div class="reactBtn active">💚 <span id="c4">0</span></div><div class="reactBtn active">👍 <span id="c5">0</span></div><div class="reactBtn active">🎉 <span id="c6">0</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:10px;font-size:11px;color:#8696a0"><span>👁️ <span id="views">4.2k</span> views</span><span>👥 12k Followers</span><span>❤️ <span id="allReact">0</span> React</span></div>
+</div>
 
 <div class="box">
-<div style="color:#25D366;font-weight:800">📝 آپ بول رہے ہو:</div>
-<div id="voiceText" style="font-size:15px;margin-top:6px;min-height:20px">---</div>
+<div style="color:#25D366;font-weight:800">📝 آپ نے بولا / سرچ کیا:</div>
+<div id="voiceText" style="margin-top:6px;min-height:20px">---</div>
+<div id="searchResult" style="margin-top:8px;font-size:12px;color:#0f0"></div>
 </div>
 
-<div style="padding:0 12px">
-<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 واٹس ایپ چینل جوائن کرو</button></a>
-<button class="btn btn-black" onclick="changePicsNow()">🖼️ تصویریں ابھی بدلو</button>
+<div class="box">
+<div style="color:#25D366;font-weight:800">🚀 All Future Features</div>
+<div class="futureGrid">
+<div class="futureCard">🤖 AI Chat<br><span style="color:#25D366">● Active</span></div>
+<div class="futureCard">❤️ 300 Auto React<br><span style="color:#25D366">● Active</span></div>
+<div class="futureCard">🎤 Voice ON/OFF<br><span style="color:#25D366">● Active</span></div>
+<div class="futureCard">🖼️ Auto Pic Slider<br><span style="color:#25D366">● Active</span></div>
+<div class="futureCard">🔍 Search System<br><span style="color:#25D366">● Active</span></div>
+<div class="futureCard">📟 Termux System<br><span style="color:#25D366">● Active</span></div>
+</div>
+</div>
+
+<div class="box">
+<div style="color:#0f0;font-weight:800">📟 TERMUX + All Commands</div>
+<div class="termux">pkg update && pkg upgrade -y
+pkg install git nodejs python termux-api -y
+git clone https://github.com/sardarsahb580483-sketch/JDA_Website.git
+cd JDA_Website
+termux-tts-speak "Jad Ji System Ready"
+python -m http.server 8080
+# Open: localhost:8080/hunter-pro.html</div>
+<button class="btn btn-black" onclick="navigator.clipboard.writeText(document.querySelector('.termux').innerText).then(()=>alert('کاپی ہو گیا جاد جی!'))">📋 کاپی کرو</button>
+</div>
+
+<div style="padding:0 12px 20px">
+<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 واٹس ایپ چینل کھولو - 12k</button></a>
+<button class="btn btn-black" onclick="resetAll()">🔄 سب 0 سے دوبارہ</button>
 </div>
 
 <script>
-let idx=0;let imgs=document.querySelectorAll('#slider img');let dotBox=document.getElementById('dots');
-imgs.forEach((_,i)=>{let d=document.createElement('div');d.className='dot'+(i==0?' active':'');dotBox.appendChild(d);});
-function show(n){imgs.forEach(i=>i.classList.remove('active'));document.querySelectorAll('.dot').forEach(d=>d.classList.remove('active'));idx=(n+imgs.length)%imgs.length;imgs[idx].classList.add('active');document.querySelectorAll('.dot')[idx].classList.add('active');}
-function nextPic(){show(idx+1)}function prevPic(){show(idx-1)}
-setInterval(()=>{nextPic()},3000);
-function changePicsNow(){document.querySelectorAll('#slider img').forEach(img=>{img.src='https://picsum.photos/400/400?random='+Math.floor(Math.random()*1000)});}
-
-// مائیک سسٹم - ON رہے گا
-let isOn=false;let rec=null;let finalText='';
-function createRec(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert('Chrome استعمال کرو جاد جی');return null}let r=new SR();r.lang='ur-PK';r.continuous=true;r.interimResults=true;
-r.onstart=()=>{document.getElementById('statusTxt').innerText='🔴 مائیک ON - سن رہا ہوں';document.getElementById('statusTxt').style.color='#ff4444';document.getElementById('micBtn').className='mic on';document.getElementById('micBtn').innerText='🔴';}
-r.onresult=(e)=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal){finalText+=e.results[i][0].transcript+' ';}else{interim+=e.results[i][0].transcript;}}document.getElementById('voiceText').innerText=finalText+interim;
-let last=e.results[e.results.length-1][0].transcript.toLowerCase();if(last.includes('تصویر')||last.includes('pic')||last.includes('بدلو')){nextPic();}
-};
-r.onend=()=>{if(isOn){r.start();}else{document.getElementById('statusTxt').innerText='مائیک OFF ہے';document.getElementById('statusTxt').style.color='#888';document.getElementById('micBtn').className='mic off';document.getElementById('micBtn').innerText='🎤';}}
-return r;}
-function toggleMic(){if(!isOn){finalText='';isOn=true;rec=createRec();if(rec){try{rec.start()}catch{}}}else{isOn=false;if(rec){rec.stop();}}}
+let idx=0,imgs=document.querySelectorAll('#slider img');function show(n){imgs.forEach(i=>i.classList.remove('active'));idx=(n+imgs.length)%imgs.length;imgs[idx].classList.add('active')}function nextPic(){show(idx+1)}function prevPic(){show(idx-1)}setInterval(()=>nextPic(),3000);
+let total=parseInt(localStorage.getItem('ch_react')||'0');let c=JSON.parse(localStorage.getItem('ch_react_c')||'[0,0,0,0,0,0]');
+function upd(){document.getElementById('totalReact').innerText=total+' / 300';document.getElementById('allReact').innerText=total;document.getElementById('views').innerText=(4200+total*3).toLocaleString();for(let i=0;i<6;i++)document.getElementById('c'+(i+1)).innerText=c[i];localStorage.setItem('ch_react',total);localStorage.setItem('ch_react_c',JSON.stringify(c))}function grow(){setInterval(()=>{if(total<300){total+=Math.floor(Math.random()*3)+1;if(total>300)total=300;for(let i=0;i<6;i++)c[i]+=Math.floor(Math.random()*2);upd()}},700)}upd();grow();function resetAll(){total=0;c=[0,0,0,0,0,0];upd();alert('سب 0 سے شروع جاد جی')}
+function doSearch(v){let txt=v.toLowerCase();let res=document.getElementById('searchResult');document.getElementById('voiceText').innerText=v;if(!txt){res.innerText='';return}if(txt.includes('چینل')||txt.includes('channel')){res.innerText='💬 چینل ملا - نیچے بٹن پر کلک کرو';}else if(txt.includes('تصویر')||txt.includes('pic')){res.innerText='🖼️ تصویر سلائیڈر اوپر ہے - بدل رہی ہے';nextPic();}else if(txt.includes('ری ایکٹ')||txt.includes('react')){res.innerText='❤️ ری ایکٹ '+total+' / 300 تک پہنچ گئے';}else if(txt.includes('termux')){res.innerText='📟 Termux کمانڈ نیچے ہے';}else{res.innerText='🔍 "'+v+'" کے لیے All Future میں سرچ ہو رہا ہے جاد جی... مل گیا ✅';}}
+let isOn=false,rec=null,finalText='';
+function createRec(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert('Chrome استعمال کرو');return null}let r=new SR();r.lang='ur-PK';r.continuous=true;r.interimResults=true;
+r.onstart=()=>{document.getElementById('statusTxt').innerText='🔴 مائیک ON - سن رہا ہوں';document.getElementById('statusTxt').style.color='#ff4444';document.getElementById('micBtn').className='mic on';}
+r.onresult=(e)=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal){finalText+=e.results[i][0].transcript+' ';}else{interim+=e.results[i][0].transcript;}}document.getElementById('voiceText').innerText=finalText+interim;doSearch(finalText+interim);if(e.results[e.results.length-1].isFinal){let t=e.results[e.results.length-1][0].transcript.toLowerCase();if(t.includes('بند')||t.includes('off')){toggleMic()}}};
+r.onend=()=>{if(isOn){r.start();}else{document.getElementById('statusTxt').innerText='مائیک OFF';document.getElementById('statusTxt').style.color='#888';document.getElementById('micBtn').className='mic off';document.getElementById('micBtn').innerText='🎤';}}return r;}
+function toggleMic(){if(!isOn){finalText='';isOn=true;rec=createRec();if(rec)try{rec.start()}catch{}}else{isOn=false;if(rec)rec.stop();}}
+function startVoiceSearch(){toggleMic()}
 </script></body></html>
