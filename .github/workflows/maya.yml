@@ -9,7 +9,6 @@ jobs:
         with: {node-version: 22}
       - uses: actions/setup-java@v4
         with: {distribution: temurin, java-version: 21}
-      - uses: android-actions/setup-android@v3
       - run: npm install --force
       - run: npm run build || npx vite build || echo "build ok"
       - run: |
