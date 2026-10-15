@@ -1,49 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MAYA PRO - JDA Assistant</title>
-<style>
-body{background:#0a0a0a;color:#fff;font-family:sans-serif;margin:0;padding:20px}
-#chat{max-width:600px;margin:0 auto}
-.msg{padding:12px;margin:10px 0;border-radius:12px}
-.user{background:#1a73e8;text-align:right}
-.maya{background:#222;border-left:3px solid #1a73e8}
-input{width:100%;padding:15px;border-radius:25px;border:none;background:#222;color:#fff;margin-top:20px}
-h1{text-align:center;color:#1a73e8}
-</style>
-</head>
-<body>
-<div id="chat">
-<h1>MAYA PRO 🤖</h1>
-<div id="msgs">
-<div class="msg maya">Sat Sri Akal JAM DANISH! Main MAYA PRO haan - Sidhu Moose Wala style assistant! Ki haal chaal? 🎵</div>
-</div>
-<input id="inp" placeholder="MAYA PRO se kuch pucho...">
-</div>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>JAM DANISH - Hunter AI PRO MAX</title>
+<style>body{background:#070707;color:#fff;font-family:sans-serif;text-align:center;padding:20px}h1{color:#ff0a0a}.mic{width:72px;height:72px;border-radius:50%;background:#ff0a0a;display:flex;align-items:center;justify-content:center;margin:20px auto;font-size:32px;cursor:pointer}</style>
+</head><body>
+<h1>The AI that runs your world - HUNTER PRO MAX</h1>
+<p>Owner JAM DANISH 03256856586 Multan</p>
+<div class="mic" onclick="toggleVoice()">🎤</div>
+<p id="status">TAP TO SPEAK - Say WhatsApp open karo</p>
 <script>
-const msgs=document.getElementById('msgs');
-const inp=document.getElementById('inp');
-const replies=[
-"Chak de phatte JAM DANISH! 🔥",
-"Brown Munde style me kaam ho jayega! 🎤",
-"295 wala flow chahida? Ho jayega!",
-"Sidhu da fan hai tu, mainu pata si! 💪",
-"JDA Website next level ja rahi hai!"
-];
-inp.addEventListener('keypress',e=>{
-if(e.key==='Enter' && inp.value){
-let v=inp.value;
-msgs.innerHTML+=`<div class="msg user">${v}</div>`;
-inp.value='';
-setTimeout(()=>{
-let r=replies[Math.floor(Math.random()*replies.length)];
-msgs.innerHTML+=`<div class="msg maya">${r}</div>`;
-msgs.scrollTop=msgs.scrollHeight;
-},800);
-}
-});
+function toggleVoice(){let r=new (webkitSpeechRecognition||SpeechRecognition)();r.lang='en-US';r.onresult=e=>{let t=e.results[0][0].transcript.toLowerCase();document.getElementById('status').innerText=t;if(t.includes('whatsapp'))window.open('https://wa.me/923256856586','_blank');else if(t.includes('youtube'))window.open('https://youtube.com/results?search_query='+t,'_blank');else if(t.includes('google'))window.open('https://google.com/search?q='+t,'_blank');else window.open('https://google.com/search?q='+t,'_blank')};r.start()}
 </script>
-</body>
-</html>
+</body></html>
