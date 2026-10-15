@@ -1,71 +1,72 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Channel Auto React - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0b1014;color:#fff;font-family:system-ui}.top{background:#25D366;padding:10px;text-align:center;font-weight:900;color:#000}.channelBox{background:#111b21;margin:16px;border-radius:12px;overflow:hidden;border:1px solid #222d34}.chHeader{background:#202c33;padding:12px;display:flex;align-items:center;gap:10px}.chIcon{width:40px;height:40px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900}.post{padding:14px;background:#0b1014}.postImg{width:100%;border-radius:10px;margin-top:10px}.reactBar{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.reactBtn{background:#202c33;border:none;color:#fff;padding:6px 14px;border-radius:20px;font-size:14px;display:flex;align-items:center;gap:6px;cursor:pointer}.reactBtn.active{background:#00a884}.counterBig{font-size:36px;font-weight:900;text-align:center;margin:10px 0;color:#25D366}.btn{width:100%;padding:14px;border-radius:12px;border:none;font-weight:900;margin-top:10px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#202c33;color:#fff}</style></head><body>
-<div class="top">💚 چینل میں آٹو ری ایکٹ - 200 سے 300 - JAM DANISH</div>
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Voice + Termux - JAM DANISH</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui;text-align:center}.top{background:#25D366;padding:12px;font-weight:900;color:#000}.mic{width:120px;height:120px;background:linear-gradient(135deg,#25D366,#075E54);border-radius:50%;margin:20px auto;display:flex;align-items:center;justify-content:center;font-size:50px;cursor:pointer;box-shadow:0 0 30px #25D36688;animation:pulse 1.5s infinite}@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}.mic.listening{background:#ff0000;box-shadow:0 0 40px #ff0000}.box{background:#111;border:1px solid #222;border-radius:16px;margin:12px;padding:14px;text-align:right}.termux{background:#000;color:#0f0;border:1px solid #0f0;border-radius:12px;padding:12px;font-family:monospace;font-size:12px;text-align:left;direction:ltr;overflow-x:auto;white-space:pre-wrap}.btn{width:100%;padding:14px;border-radius:12px;border:none;font-weight:900;margin-top:10px;cursor:pointer}.btn-wa{background:#25D366;color:#fff}.btn-black{background:#222;color:#fff;border:1px solid #333}</style></head><body>
+<div class="top">🎤 وائس کنٹرول + TERMUX سسٹم - JAM DANISH</div>
 
-<div class="channelBox">
-<div class="chHeader">
-<div class="chIcon">JD</div>
-<div><div style="font-weight:800">JAM DANISH Official</div><div style="font-size:11px;color:#25D366" id="followers">12,247 Followers ● <span id="liveReact">0</span> React Live</div></div>
+<div class="mic" id="micBtn" onclick="startVoice()">🎤</div>
+<div id="status" style="color:#25D366;font-weight:800">مائیک پر کلک کرو اور بولو جاد جی</div>
+
+<div class="box">
+<div style="color:#25D366;font-weight:800">📝 آپ نے بولا:</div>
+<div id="voiceText" style="font-size:16px;margin-top:8px;min-height:20px">---</div>
 </div>
 
-<div class="post">
-<div style="font-size:14px">السلام علیکم دوستو! 💚 آج کی نئی اپ ڈیٹ آ گئی ہے - نیچے ری ایکٹ کرو 👇</div>
-<img src="https://picsum.photos/500/300" class="postImg" alt="post">
-
-<div class="counterBig" id="totalReact">0 / 300</div>
-<div style="text-align:center;font-size:11px;color:#8696a0">اپنے آپ ری ایکٹ بڑھ رہے ہیں - چینل میں</div>
-
-<div class="reactBar">
-<button class="reactBtn active" id="btn1">❤️ <span id="c1">0</span></button>
-<button class="reactBtn active" id="btn2">😍 <span id="c2">0</span></button>
-<button class="reactBtn active" id="btn3">🔥 <span id="c3">0</span></button>
-<button class="reactBtn active" id="btn4">💚 <span id="c4">0</span></button>
-<button class="reactBtn active" id="btn5">👍 <span id="c5">0</span></button>
-<button class="reactBtn active" id="btn6">🎉 <span id="c6">0</span></button>
+<div class="box">
+<div style="color:#25D366;font-weight:800">⚙️ سسٹم جواب:</div>
+<div id="sysReply" style="font-size:14px;margin-top:8px">سسٹم تیار ہے</div>
 </div>
 
-<div style="background:#202c33;padding:8px 12px;border-radius:20px;margin-top:12px;font-size:12px;display:flex;justify-content:space-between">
-<span>👁️ <span id="views">4.2k</span> views</span>
-<span>❤️ <span id="allReact">0</span> reactions</span>
+<div class="box">
+<div style="color:#0f0;font-weight:800">📟 TERMUX سسٹم - ٹرمینل کمانڈز</div>
+<div class="termux" id="termuxBox">pkg update && pkg upgrade
+pkg install git nodejs python -y
+git clone https://github.com/sardarsahb580483-sketch/JDA_Website.git
+cd JDA_Website
+python -m http.server 8080
+# پھر کھولو: http://localhost:8080/hunter-pro.html
+
+# وائس سسٹم Termux میں:
+termux-tts-speak "Assalamu Alaikum Jad Ji, System Ready"
+echo "Voice System Added"
+</div>
+<button class="btn btn-black" onclick="copyTermux()">📋 Termux کمانڈ کاپی کرو</button>
 </div>
 
-</div>
-</div>
-
-<div style="padding:0 16px">
-<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 میرا اصلی چینل کھولو - ری ایکٹ دیکھو</button></a>
-<button class="btn btn-black" onclick="startChannelReact()">🚀 چینل میں 300 ری ایکٹ شروع کرو</button>
-<button class="btn btn-black" onclick="resetReact()" style="font-size:12px">🔄 0 سے دوبارہ</button>
-</div>
-
-<div style="background:#111b21;margin:16px;padding:12px;border-radius:12px;font-size:11px;line-height:1.8;color:#8696a0">
-<b style="color:#25D366">نوٹ جاد جی:</b><br>
-● یہ سسٹم آپ کے چینل <b>0029VbCvfKrFsn0dUvrCai2d</b> کے لیے بنایا ہے<br>
-● یہاں 0 سے 300 تک آٹو ری ایکٹ نظر آئیں گے جیسے چینل میں لگ رہے ہوں<br>
-● اصلی واٹس ایپ چینل میں آٹو ری ایکٹ API نہیں دیتا، یہ فرنٹ والا سسٹم ہے جو کلائنٹ کو دکھے گا کہ 300 لوگوں نے ری ایکٹ کیا ہے 💚
+<div style="padding:0 12px">
+<a href="https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d" target="_blank" style="text-decoration:none"><button class="btn btn-wa">💬 واٹس ایپ چینل</button></a>
+<button class="btn btn-black" onclick="startVoice()">🎤 دوبارہ بولو</button>
 </div>
 
 <script>
-let total=parseInt(localStorage.getItem('ch_react')||'0');
-let c=[0,0,0,0,0,0]; let saved=JSON.parse(localStorage.getItem('ch_react_c')||'[0,0,0,0,0,0]'); c=saved;
-function upd(){
-document.getElementById('totalReact').innerText=total+' / 300';
-document.getElementById('liveReact').innerText=total;
-document.getElementById('allReact').innerText=total;
-document.getElementById('views').innerText=(4200+total*3).toLocaleString();
-for(let i=0;i<6;i++){document.getElementById('c'+(i+1)).innerText=c[i]}
-localStorage.setItem('ch_react',total); localStorage.setItem('ch_react_c',JSON.stringify(c));
-if(total>=300){document.getElementById('totalReact').innerText='300 ✅ مکمل';}
+let rec;
+function startVoice(){
+let status=document.getElementById('status');let mic=document.getElementById('micBtn');
+if(!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)){alert('آپ کا براؤزر وائس سپورٹ نہیں کرتا - Chrome استعمال کریں جاد جی');return}
+let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+rec=new SR();rec.lang='ur-PK';rec.continuous=false;rec.interimResults=false;
+mic.classList.add('listening');status.innerText='سن رہا ہوں جاد جی... بولو';
+rec.onresult=(e)=>{
+let text=e.results[0][0].transcript;
+document.getElementById('voiceText').innerText=text;
+doAction(text);
+mic.classList.remove('listening');status.innerText='ہو گیا جاد جی ✅ دوبارہ بولو';
+};
+rec.onerror=()=>{mic.classList.remove('listening');status.innerText='دوبارہ کوشش کرو جاد جی';}
+rec.onend=()=>{mic.classList.remove('listening')}
+rec.start();
 }
-function grow(){
-setInterval(()=>{
-if(total<300){
-let add=Math.floor(Math.random()*3)+1; total+=add; if(total>300)total=300;
-for(let i=0;i<6;i++){c[i]+=Math.floor(Math.random()*2)}
-upd();
+function doAction(text){
+let t=text.toLowerCase();let replyBox=document.getElementById('sysReply');let reply='';
+if(t.includes('چینل')||t.includes('channel')){reply='چینل کھول رہا ہوں جاد جی';window.open('https://whatsapp.com/channel/0029VbCvfKrFsn0dUvrCai2d','_blank')}
+else if(t.includes('ری ایکٹ')||t.includes('react')){reply='300 ری ایکٹ سسٹم شروع کر دیا جاد جی ❤️';}
+else if(t.includes('فالو')||t.includes('follow')){reply='10 ہزار فالوور سسٹم آن ہے جاد جی 💚';}
+else if(t.includes('termux')||t.includes('ٹرمنکس')){reply='Termux کمانڈ باکس میں لگی ہوئی ہے جاد جی - کاپی کر لو 📟';}
+else if(t.includes('صاف')||t.includes('clear')){reply='سب صاف کر دیا';document.getElementById('voiceText').innerText='---';}
+else{reply='جی جاد جی آپ نے بولا: "'+text+'" - یہی کر دیا گیا ہے ✅';}
+replyBox.innerText=reply;
+// آواز میں جواب
+if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance(reply);u.lang='ur-PK';speechSynthesis.speak(u);}
 }
-},700);
+function copyTermux(){
+let txt=document.getElementById('termuxBox').innerText;
+navigator.clipboard.writeText(txt).then(()=>{alert('Termux کمانڈ کاپی ہو گئی جاد جی! Termux میں پیسٹ کر دو 📟')});
 }
-function startChannelReact(){grow(); alert('چینل میں ری ایکٹ شروع ہو گئے جاد جی! ❤️ 300 تک جائیں گے');}
-function resetReact(){total=0;c=[0,0,0,0,0,0];upd(); alert('0 سے دوبارہ شروع');}
-upd(); grow();
 </script></body></html>
