@@ -1,0 +1,9 @@
+{
+	"appId": "com.jamdanish.ai",
+	"appName": "JAM DANISH AI",
+	"webDir": "www",
+	"server": {
+		"url": "https://jamdanish-official.vercel.app",
+		"cleartext": true
+	}
+}

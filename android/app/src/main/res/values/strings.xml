@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JAM DANISH AI</string>
+    <string name="title_activity_main">JAM DANISH AI</string>
+    <string name="package_name">com.jamdanish.ai</string>
+    <string name="custom_url_scheme">com.jamdanish.ai</string>
+</resources>
